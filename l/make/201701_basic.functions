@@ -67,65 +67,13 @@
 
   }
 
-# --------------------------------------------------------------------------- #
-# HREFSYSTEM
-# --------------------------------------------------------------------------- #
-
-  function shortref() {
-
-      IDP1=`echo $* | cut -d " " -f 1 | #
-            sed 's/ //g' | md5sum  | #
-            base64 | cut -c 1-3`  # 
-      IDP2=`echo $* | cut -d " " -f 2- | #
-            sed 's/ //g' | md5sum  | #
-            base64 | cut -c 4-5` # 
-     REFID="${IDP1}${IDP2}"
-
-     THISFLAG=`echo "$*" | sed 's/^[ \t]*//'`
-    #echo "${REFID}:$THISFLAG" >> $SHORTURLOG
-     echo "$SHORTURLBASE/$REFID"
-  }
-
-  function urlitzer() {
-
-        IFHTTP=`echo $1 | grep "^http.\?://" | wc -l`
-        if [ $IFHTTP -ge 1 ]; then
-             echo $1
-         else
-             shortref "$*"
-        fi
-  }
-
-  function refsrc() {
-          echo $1
-  }
-
-
-function HREF() {
- 
-       O=`echo $* | cut -d " " -f 1`
-       THISCMD="% HREF:"
- 
-   if [ "X$O" == "XON"  ] ||
-      [ "X$O" == "XOFF" ]
-    then
-         HREFMODE="$O"
-        #echo "HREFMODE: $HREFMODE"
-    else
-     if [ "X$HREFMODE" != "XOFF"  ]; then
-
-         WWWLINK=`urlitzer "$*"`
-         REFCODE=`refsrc $WWWLINK`
-         write2src "$REFCODE" 
-     fi
-   fi
-}
-
 # +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ #
 # +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ #
 
+# =========================================================================== #
 # MAIN MDSH CONVERT FUNCTION
 # =========================================================================== #
+
 
   function mdsh2src() {
 
@@ -228,17 +176,19 @@ function HREF() {
       CP1FOO=${CICOMMON}CP${RANDOM}1 ; CP2FOO=CP${RANDOM}2
      CODEFOO=CO${RANDOM}DE
 
-  # THE GREAT ESCAPE
-  # ---------------------------------
+  # ------------------------------------ #
+  # THE GREAT ESCAPE                     #
+  # ------------------------------------ #
     FNOESC=$ESC`echo $FOOTNOTEOPEN     | #
                 sed 's/\\\/\\\\\\\/g'  | #
-                sed 's/\//\\\\\//g'`
+                sed 's/\//\\\\\//g'`     #
     CTOESC=$ESC`echo $CITEOPEN         | #
                 sed 's/\\\/\\\\\\\/g'  | #
-                sed 's/\//\\\\\//g'`
+                sed 's/\//\\\\\//g'`     #
     CPOESC=$ESC`echo $CITEPOPEN        | #
                 sed 's/\\\/\\\\\\\/g'  | #
-                sed 's/\//\\\\\//g'`
+                sed 's/\//\\\\\//g'`     #
+  # ------------------------------------ #
 
   cat $PROTECTED                         | # USELESS USE OF CAT
   sed "s/^ *$/$EMPTYLINE/g" | # PROTECT EMPTY LINES (BREAK FOR HEADINGS)
@@ -379,67 +329,39 @@ function HREF() {
 
  }
 
+
+
+
+
+
 # +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ #
 # +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ #
 
+# --------------------------------------------------------------------------- #
 
 function INCLUDE() {
 
   echo "INCLUDE STARTS ====================================================="
 
-  FID=`date +%s%N`
 # SAVE FUNCTION ID (NOT AS VARIABLE, MAY BE OVERWRITTEN)
-  echo $FID >> ${TMPID}.fid
-
-# EXTRACT OPTIONAL PARAMETERS
-# ---------------------------------------------------------
-  FUNCTIONSHERE=`echo $* | sed 's/ /\n/g' | #
-                 grep "\.functions$" | tail -n 1`
-
-  if [ `echo $FUNCTIONSHERE | wc -c` -gt 1 ];then
-  PARAMETERSWITHOUTFUNCTIONS=`echo $*        | #
-                              sed 's/ /\n/g' | #
-                              grep -v "\.functions$"`                                    # TODO: BETTER
-
-# ATTACH FUNCTIONS TO MAIN FUNCTIONS
-# ---------------------------------------------------------
-  if [ `ls $FUNCTIONSHERE 2>/dev/null | wc -l` -gt 0 ];then
-
- # ATTACH AND MARK FUNCTIONS
-   echo "#  -- ${FID} -- START" >> $FUNCTIONS
-   cat  $FUNCTIONSHERE          >> $FUNCTIONS
-   echo "#  -- ${FID} -- END"   >> $FUNCTIONS
-   FUNCTIONSADDED="YES"
-   fi
-   else
-   FUNCTIONSADDED="NO"
-  fi
-
-# MAKE HREF
-# --------------------------------------------------------
-  WWWLINK=`shortref $*`
-  REFCODE=`refsrc $WWWLINK       | #
-           sed 's/\\\/\\\\\\\/g' | #
-           sed 's/\//\\\\\//g'`    #
-   IDINID=`echo $REFCODE | md5sum | cut -c 1-6`
-  REFIDIN="$IDINID"
-  if [ X"$HREFMODE" != "XOFF" ]; then
-  write2src "HEREREF$REFIDIN"
-  fi
+# ------------------------------------------------------ #
+  FID=`date +%s%N`; echo $FID >> ${TMPID}.fid
 
 # PROCESS INPUT !!!!!
 # --------------------------------------------------------
   mdsh2src $*
 
-# ADD REFERENCE IF NOT SKIPPED
-# --------------------------------------------------------
-  if [ X"$SKIP"     != "XYES" ] &&
-     [ Y"$RUN"      == "YYES" ]; then
-       sed -i "s,HEREREF$REFIDIN,$REFCODE," $SRCDUMP
-  else
-       sed -i "/^HEREREF${REFIDIN}$/d" $SRCDUMP
-  fi
-       sed -i "/^HEREREF.*$/d" $SRCDUMP # EMERGENCY REMOVE
+
+## ADD REFERENCE IF NOT SKIPPED ??? <- NEEDED FOR ???
+## --------------------------------------------------------
+#  if [ X"$SKIP"     != "XYES" ] &&
+#     [ Y"$RUN"      == "YYES" ]; then
+#       sed -i "s,HEREREF$REFIDIN,$REFCODE," $SRCDUMP
+#  else
+#       sed -i "/^HEREREF${REFIDIN}$/d" $SRCDUMP
+#  fi
+#       sed -i "/^HEREREF.*$/d" $SRCDUMP # EMERGENCY REMOVE
+
 
 # REMOVE ADDED FUNCTIONS
 # --------------------------------------------------------
@@ -459,7 +381,50 @@ function INCLUDE() {
   echo "INCLUDE ENDS  ======================================================"
 }
 
+# --------------------------------------------------------------------------- #
 
+function EXTENDFUNCTIONS() {
 
+  if [ -f ${TMPID}.fid ]
+  then FID=`tail -n 1 ${TMPID}.fid`
+  else FID=`date +%s%N`
+     # ------------------------------------------------------ #
+     # SAVE FUNCTION ID (NOT AS VARIABLE, MAY BE OVERWRITTEN)
+     # ------------------------------------------------------ #
+       echo $FID >> ${TMPID}.fid
+  fi
+
+  FUNCTIONSHERE=`echo $* | sed 's/ /\n/g' | #
+                 grep "\.functions$" | tail -n 1`
+  FUNCTIONSHERE=$INCLUDEPATH/$FUNCTIONSHERE
+
+  if [ `echo $FUNCTIONSHERE | wc -c` -gt 1 ];then
+  PARAMETERSWITHOUTFUNCTIONS=`echo $*        | #
+                              sed 's/ /\n/g' | #
+                              grep -v "\.functions$"`
+  
+ # ATTACH FUNCTIONS TO MAIN FUNCTIONS
+ # ---------------------------------------------------------
+   if [ `ls $FUNCTIONSHERE 2>/dev/null | wc -l` -gt 0 ];then
+
+ # FID=`date +%s%N` # DO NOT SET => WILL BE REMOVED BY % INCLUDE (+ ADJUST %INCLUDE)
+ # ATTACH AND MARK FUNCTIONS
+   echo "#  -- ${FID} -- START" >> $FUNCTIONS
+   cat  $FUNCTIONSHERE          >> $FUNCTIONS
+   echo "#  -- ${FID} -- END"   >> $FUNCTIONS
+
+   source $FUNCTIONS
+
+   FUNCTIONSADDED="YES"
+ # SAVE FUNCTION ID (NOT AS VARIABLE, MAY BE OVERWRITTEN)
+ # echo $FID >> ${TMPID}.fid
+   fi
+   else
+   FUNCTIONSADDED="NO"
+  fi
+
+}
+
+# --------------------------------------------------------------------------- #
 
 
