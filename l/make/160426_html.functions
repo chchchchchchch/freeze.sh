@@ -1,0 +1,209 @@
+
+# --------------------------------------------------------------------------- #
+
+function FLOIN(){
+
+  THISCMD="% MINIFLOW:"
+        C=`echo $* | sed 's/^[ \t]*//'`
+  FOOPATH="$SHPATH/../foo"
+  FOOBASEURL="/l/foo"
+  FOOCOLOR="#dddddd"
+
+  listSrc
+
+  # TODO: better name
+
+
+ ( IFS=$'\n'
+
+   if [ -f $SRCLIST ]; then
+
+   mv $SRCLIST tmp.list
+
+   for THIS in `cat tmp.list                   | #
+                sed "s/[ ]*${COMSTART}[ ]*//g" | #
+                sed "s/[ ]*$COMCLOSE[ ]*//g"   | #
+                sed "s/^%[ ]*//"`                #
+    do
+          SRC=`echo $THIS | cut -d ":" -f 1`
+         HREF=`echo $THIS | cut -d ":" -f 2-`
+         if [ `echo $HREF | wc -c` -le 1 ] ||
+            [ `echo $THIS | grep ":" | wc -l` -lt 1 ]
+         then  AHREF="";FERHA=""
+         else  AHREF="<a href=\"$HREF\">"
+               FERHA="</a>"; fi
+
+       if [ -f $INCLUDEPATH/${SRC} ]; then
+
+       WXHSRC=`identify -ping -format "%wx%h" $INCLUDEPATH/${SRC}[0]`
+         WSRC=`echo $WXHSRC | cut -d "x" -f 1` 
+         HSRC=`echo $WXHSRC | cut -d "x" -f 2`
+         WFOO=`python -c "print $WSRC / 10"`
+         HFOO=`python -c "print $HSRC / 10"`
+      FOONAME="${WFOO}x${HFOO}.gif"
+       FOOURL="${FOOBASEURL}/${FOONAME}"
+          FOO="$FOOPATH/$FOONAME"
+          if [ ! -f $FOO ]; then
+               convert -size ${WFOO}x${HFOO} \
+                       xc:$FOOCOLOR $FOO ;fi
+          ALT=`basename $SRC`;T="$ALT"
+          ID=`basename $SRC | md5sum | cut -c 1-6`
+          write2src "<figure class=\"uf $C\">${AHREF}"
+          write2src "<img data-src=\"$SRC\" src=\"$FOOURL\""
+          write2src " id=\"$ID\" alt=\"$ALT\" title=\"$T\" />"
+          write2src "${FERHA}<noscript><img src=\"$SRC\""
+          write2src "title=\"$T\" alt=\"$ALT\"/>"
+          write2src '</noscript></figure>'
+       fi
+   done
+   rm tmp.list
+ fi
+
+)
+
+}
+
+# --------------------------------------------------------------------------- #
+
+function MAKEHREFS() {
+
+  if [ `echo $INCLUDEPATH | wc -c` -gt 1 ]; then
+
+        LINKLIST=`echo $1 | sed 's/^[ ]*//'`
+
+     ( IFS=$'\n'
+       UN=U`echo $RANDOM | cut -c 1-2`N
+
+        for ITEM in `cat ${INCLUDEPATH}/$LINKLIST  | #
+                     egrep -v "^%|^#"              | #
+                     awk 'BEGIN { FS = ":" } ; \
+                     { print length($1) ":" $0; }' | # ADD LENGTH OF FIELD 1
+                     sort -n                       | # NUMERIC SORT (=LENGTH)
+                     cut -d ":" -f 2-              | # REMOVE LENGTH AGAIN
+                     tac`
+         do
+            echo $ITEM
+   
+            HREF=`echo $ITEM | cut -d ":" -f 2-`
+            ITEM=`echo $ITEM     | #
+                  cut -d ":" -f 1  | #
+                  eval $PANDOCACTION | #
+                  sed 's/<[^>]*p>//g'`   #
+            K=`echo $ITEM          | # START
+               sed 's/\//\\\\\//g' | # ESCAPE \ FOR sed
+               sed 's/\./\\\./g'`    # ESCAPE \ FOR sed
+            H=`echo $HREF          | # START
+               sed 's/\//\\\\\//g' | # ESCAPE \ FOR sed
+               sed 's/\./\\\./g'`    # ESCAPE \ FOR sed
+            A="<a href=\"$H\">"
+
+            if [ `echo "$ITEM" | wc -w ` -eq 1 ]; then
+                # REPLACE
+                  sed -i "s/\([^\">\-]\)\(\(\b${K}\b\)\([^\"-]\)\)/\1${A}K$UN\3K${UN}<\/a>\4/Ig" $SRCDUMP
+                # REPAIR
+                  sed -i "s/\(${A}K${UN}${K}K${UN}<\/a>\)\(\.[a-z]\{2,4\}\)/$K\2/Ig" $SRCDUMP
+                 #sed -i "s/^$K\b/${A}K${UN}${K}K${UN}<\/a>/g" $SRCDUMP
+                 #sed -i "s/\(^<[^>]*>\)\($K\b\)/\1${A}K${UN}${K}K${UN}<\/a>/Ig" $SRCDUMP
+                  sed -i "s/\(^<[^>]*>\)\($K\b\)/\1${A}K${UN}\2K${UN}<\/a>/Ig" $SRCDUMP
+                  sed -i "s/\b$K$/${A}K${UN}${K}K${UN}<\/a>/Ig" $SRCDUMP
+              else
+                  sed -i "s/$K/${A}K${UN}&K${UN}<\/a>/Ig" $SRCDUMP
+            fi
+       done 
+
+       sed -i "s/K$UN//g" $SRCDUMP  # NORMALIZE PROTECTED KEYWORD ANCHOR
+
+     )
+  fi
+}
+
+# --------------------------------------------------------------------------- #
+
+function SWAP(){
+
+  FROM=`echo $* | cut -d " " -f 1   | # 
+        sed 's/ //g' | sed 's/"//g' | sed 's/\\\/\\\\\\\/g'`
+    TO=`echo $* | cut -d " " -f 2-  | # 
+        sed 's/ //g' | sed 's/"//g' | sed 's/\\\/\\\\\\\/g'`
+
+   sed -i "s,$FROM,$TO,g" ${SRCDUMP}
+}
+
+# --------------------------------------------------------------------------- #
+
+function REF() {
+
+  REFID=`echo $*             | # WHAT? 
+         sed 's/^[ \t]*//'   | # REMOVE LEADING WHITESPACE
+         sed 's/[ \t]*$//'   | # REMOVE TRAILING WHITESPACE
+         md5sum | cut -c 1-10` # CREATE UNIQUE ID
+
+  write2src "<span id=\"$REFID\" class=\"ref\"></span>"
+
+}
+
+# --------------------------------------------------------------------------- #
+
+function REFREF() {
+
+  REFID=`echo $*             | # WHAT? 
+         sed 's/^[ \t]*//'   | # REMOVE LEADING WHITESPACE
+         sed 's/[ \t]*$//'   | # REMOVE TRAILING WHITESPACE
+         md5sum | cut -c 1-10` # CREATE UNIQUE ID
+
+  write2src "<a href=\"#$REFID\">$REFID</a> " 
+}
+
+# --------------------------------------------------------------------------- #
+
+function EXTENDFUNCTIONS() {
+
+  if [ -f ${TMPID}.fid ]; then
+  FID=`tail -n 1 ${TMPID}.fid`
+  else
+  FID=`date +%s%N`
+# SAVE FUNCTION ID (NOT AS VARIABLE, MAY BE OVERWRITTEN)
+  echo $FID >> ${TMPID}.fid
+  fi
+
+  FUNCTIONSHERE=`echo $* | sed 's/ /\n/g' | #
+                 grep "\.functions$" | tail -n 1`
+  FUNCTIONSHERE=$INCLUDEPATH/$FUNCTIONSHERE
+
+  if [ `echo $FUNCTIONSHERE | wc -c` -gt 1 ];then
+  PARAMETERSWITHOUTFUNCTIONS=`echo $*        | #
+                              sed 's/ /\n/g' | #
+                              grep -v "\.functions$"` 
+
+ # ATTACH FUNCTIONS TO MAIN FUNCTIONS
+ # ---------------------------------------------------------
+   if [ `ls $FUNCTIONSHERE 2>/dev/null | wc -l` -gt 0 ];then
+
+ # FID=`date +%s%N` # DO NOT SET => WILL BE REMOVED BY % INCLUDE (+ ADJUST %INCLUDE)
+ # ATTACH AND MARK FUNCTIONS
+   echo "#  -- ${FID} -- START" >> $FUNCTIONS
+   cat  $FUNCTIONSHERE          >> $FUNCTIONS
+   echo "#  -- ${FID} -- END"   >> $FUNCTIONS
+
+   source $FUNCTIONS
+
+   FUNCTIONSADDED="YES"
+ # SAVE FUNCTION ID (NOT AS VARIABLE, MAY BE OVERWRITTEN)
+ # echo $FID >> ${TMPID}.fid
+   fi
+   else
+   FUNCTIONSADDED="NO"
+  fi
+
+}
+
+# --------------------------------------------------------------------------- #
+
+function TITLE() {
+
+  write2src "<h1 class="title">$*</h1>"
+
+}
+
+# --------------------------------------------------------------------------- #
+
