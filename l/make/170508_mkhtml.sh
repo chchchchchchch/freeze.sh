@@ -127,14 +127,20 @@
           tac $HTML | #
           sed -n "/<!--.*${HEADMARK}.*-->$/,\$p" | tac   >  ${HTML}.tmp
           echo ""                                        >> ${HTML}.tmp
-          cat $THISDUMP                                  >> ${HTML}.tmp
+          cat $THISDUMP                                     | #
+          sed -e :a -e '$!N;s/[ ]*\n<!--/<!--/;ta' -e 'P;D' | # RM EMPTY LINES BETWEEN COMMENTS
+          sed "/^${COMSTART}.*${COMCLOSE}$/d"               | # RM COMMENTS
+          tee                                            >> ${HTML}.tmp
           echo ""                                        >> ${HTML}.tmp
           sed -n "/<!--.*${FOOTMARK}.*-->$/,\$p" ${HTML} >> ${HTML}.tmp
           mv ${HTML}.tmp ${HTML}
   else    tac $HTML | #
           sed -n "/<body>/,\$p" | tac     >  ${HTML}.tmp
           echo ""                         >> ${HTML}.tmp
-          cat $THISDUMP                   >> ${HTML}.tmp
+          cat $THISDUMP                                     | #
+          sed -e :a -e '$!N;s/[ ]*\n<!--/<!--/;ta' -e 'P;D' | # RM EMPTY LINES BETWEEN COMMENTS
+          sed "/^${COMSTART}.*${COMCLOSE}$/d"               | # RM COMMENTS
+          tee                                            >> ${HTML}.tmp
           echo ""                         >> ${HTML}.tmp
           sed -n "/<\/body>/,\$p" ${HTML} >> ${HTML}.tmp
           mv ${HTML}.tmp ${HTML}    
