@@ -11,7 +11,7 @@
       exit 0;
   elif [ `echo "$SRCDIR" | wc -c` -lt 2 ]
    then echo "----"; echo "CHECK/DOWNLOAD ALL SOURCES."
-        SRCDIR="."
+        SRCDIR="../_"
    if [ `find $SRCDIR -name "*.remote" | #
          wc -l` -gt 0 ]; then
         N=`cat \`find $SRCDIR -name "*.remote"\` | #
@@ -100,7 +100,8 @@
      # DOWNLOAD IF NO LOKAL FILE                      #
      # ---------------------------------------------- #
              curl -RL "$REMOTE" -o "$LOKAL"
-       fi;fi
+       fi
+       fi
  
       done;)
     # ------------------------------------------------- #
