@@ -34,9 +34,11 @@
      then if [ -f `echo $ARGUMENTS | sed 's/\.svg$//'`.svg ]
           then SVGALL=`echo $ARGUMENTS | sed 's/\.svg$//'`.svg
           elif [ -d $ARGUMENTS ]
-          then SVGALL=`find $ARGUMENTS -name "*.svg" | grep "EDIT/[^/]*\.svg"`
+          then SVGALL=`find $ARGUMENTS -name "*.svg" | #
+                       grep "EDIT/" | grep "\.svg$"`
           else echo "SOMETHING SEEMS WRONG";exit 0;fi
-     else SVGALL=`find $SVGROOT -name "*.svg" | grep "EDIT/[^/]*\.svg"`
+     else SVGALL=`find $SVGROOT -name "*.svg" | #
+                  grep "EDIT/" | grep "\.svg$"`
           N=`echo $SVGALL | sed 's/ /\n/g' | wc -l`
           echo -e "$N FILES TO PROCESS. \
                    THIS WILL TAKE SOME TIME.\n" | tr -s ' '
