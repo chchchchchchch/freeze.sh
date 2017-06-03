@@ -1,0 +1,1065 @@
+# =========================================================================== #
+#  O V E R W R I T E   F U N C T I O N S
+# =========================================================================== #
+  function refsrc() {
+         echo "<div class=\"sref\"><a href=\"$1\"> \
+               <img src=\"../../../l/img/sref.svg\" alt=\"sref\" /></a></div>" | #
+                sed ':a;N;$!ba;s/\n/ /g'                | #
+                sed 's/>[ ]*</></g'
+  }
+
+# =========================================================================== #
+#  S H A R E D
+# =========================================================================== #
+  SHORTURLBASE="http://lfkn.de"
+  XLINKID="xlink:href"
+  SRCLIST=${TMPID}X.list
+
+  SEEMEBASE="http://www.forkable.eu"
+  IDSRC="https://raw.githubusercontent.com/christop/DOK/3004/EDIT/160120_forkableids.list"
+  IDGET=${TMPID}`echo $IDSRC | md5sum | cut -c 1-10`.list
+  if [ ! -f $IDGET ]; then
+        getFile $IDSRC $IDGET
+   if [ "X$SUCCESS" != "XYES" ]; then 
+         touch $IDGET
+   fi
+  fi
+
+# =========================================================================== #
+
+ function listSrc() { # -> getSRCList
+
+  if [ `echo $* | wc -c` -lt 2 ]; then   # = NO PARAMETERS PROVIDED 
+       SEP="% -----"                     # THIS IS THE SEPARATOR
+      SEPN=`grep -n "" $SRCDUMP             | # NUMBER LINES
+            egrep "$SEP|^[0-9]*:$EMPTYLINE" | # LOCATE SEPARATOR OR EMPTY LINE
+            tail -n 1                       | # SELECT LAST 
+            cut -d ":" -f 1`                  # SELECT FIRST FIELD
+       sed "1,${SEPN}d" $SRCDUMP   | # PRINT FROM LINE NUM TO END
+       grep -v "^$THISCMD"         | # IGNORE COMMAND ITSELF
+       sed "s/^%//"                | # REMOVE LEADING %
+       sed "s/^[ ]*//"             | # REMOVE ALL LEADING BLANKS
+       sed "/^[ \t]*$/d"           | # REMOVE EMPTY LINES
+       tee      > $SRCLIST
+  else 
+       echo $*  > $SRCLIST
+  fi
+
+ }
+
+# =========================================================================== #
+
+ function getFileRange() {
+ 
+   COLLECTED=$TMPID.srccollected
+
+ ( IFS=$'\n'
+  if [ -f $SRCLIST ]; then
+   for THISSRC in `cat $SRCLIST`
+    do
+       SRCURL=`echo $THISSRC | sed 's/ /\n/g'   | # SPACES TO NEWLINES
+               sed "/\.functions$/s/^/XXX/g"    | # MARK LINES WITH .functions EXTENSION
+               sed "/\.[a-z]\{2,4\}$/s/^/XXX/g" | # MARK LINES WITH 2-4 CHAR EXT
+               sed "/\/[0-9]*$/s/^/XXX/g"       | # MARK LINES WITH ENDING WITH /0000
+               grep "^XXX" | sed 's/^XXX//'     | # SELECT AND REMOVE MARK
+               head -n 1`                         # SELECT FIRST
+        LINES=`echo $THISSRC | sed "s/ /\n/g"   | # SPACES TO NEWLINES
+               sed "/[^0-9\\-]/d"               | # NO LINES WITH MORE THAN NUMS AND -
+               egrep -v "^-|-$"                 | # IGNORE ISOLATED - 
+               grep -v "^[ ]*$" | tail -n 1`      # LAST LINE ONLY
+
+       if [ `echo $LINES | wc -c` -gt 1 ]; then   # IF LINE OPTION IS SET
+             LINES=`echo $LINES | sed 's/-/,/'`
+             SELECTSRCLINES="sed -n \"${LINES}p\" "
+       else                                       # IF LINE OPTION IS NOT SET
+             SELECTSRCLINES="tee"
+       fi
+
+       SRCGET=${TMPID}SRC`echo $SRCURL | md5sum | cut -c 1-3`.txt  
+       if [ ! -f $SRCGET ]; then
+            getFile $SRCURL $SRCGET
+       fi;  if [ -f $SRCGET ]; then
+            echo "$COMSTART SRCURL: $SRCURL $COMCLOSE" >> $COLLECTED
+            cat   $SRCGET                 | # START WITH ALL
+            eval "$SELECTSRCLINES"        | # DO SELECT LINE RANGE
+            tee                           >> $COLLECTED
+     fi
+   done 
+  fi
+ )
+   if [ -f $COLLECTED ]; then
+   INDENT=`cat $COLLECTED             | # START PIPE WITH COLLECTION
+           grep -v "$COMSTART SRCURL" | #
+           sed '/^[ \t]*$/d'          | # IGNORE/DELETE EMPTY LINES
+           sed -E 's/([^ \t]).*//'    | # KEEP ONLY LEADING BLANK
+           sort -r                    | # REVERSE SORT
+           tail -n 1                  | # SELECT LAST (=SHORTEST)
+           wc -c`                       # COUNT  
+   if [ $INDENT -eq 0 ]; then INDENT=1 ; fi
+   fi
+ }
+
+# =========================================================================== #
+
+
+# --------------------------------------------------------------------------- #
+
+function SRCODE() {
+
+  THISCMD="% SRCODE:"
+  LASTURL=""
+
+  listSrc $*
+  getFileRange
+
+  if [ -f $COLLECTED ]; then
+
+     INDENTCOMSTART=`printf " %.0s" {1..100}`
+
+     cat $COLLECTED                           | # START ...
+     sed "s/$COMSTART/$INDENTCOMSTART&/"      | # INDENT COMMENT TO NOT BE CUT
+     cut -c ${INDENT}-                        | # REMOVE INDENT
+     sed "/^[ ]*${COMSTART} SRC/!s/</\&lt;/g" | # ENTITY FOR BRACKET
+     sed "/^[ ]*${COMSTART} SRC/!s/>/\&gt;/g" | # ENTITY FOR BRACKET
+     tee > tmp.collect                          # WRITE TO FILE
+
+      for URLNUM in `grep -n "[ ]*$COMSTART SRCURL" tmp.collect | #
+                     cut -d ":" -f 1`; 
+       do 
+          THISURL=`sed -n "${URLNUM}p" tmp.collect | #
+                   cut -d ":" -f 2- | cut -d " " -f 2`
+          if [ "X$THISURL"  != "X$LASTURL" ] &&
+             [ "X$HREFMODE" != "XOFF" ]
+           then
+                WWWLINK=`urlitzer $THISURL`
+                REFCODE=`refsrc $WWWLINK      | #
+                         sed 's/<div/<span/g' | #
+                         sed 's/<\/div>/<\/span>/g'`
+                sed -i "${URLNUM}s,^.*$,$REFCODE," tmp.collect
+          else
+                sed -i "${URLNUM}s,^.*$,," tmp.collect
+          fi
+          LASTURL="$THISURL"
+      done
+
+    write2src         "<pre><code>"
+    cat tmp.collect   | # USELESS USE OF CAT
+    tee >> $SRCDUMP
+    write2src         "</code></pre>"
+
+    rm $COLLECTED #tmp.collect
+  fi
+
+  if [ -f $SRCLIST ]; then rm $SRCLIST ;fi
+
+}
+
+# --------------------------------------------------------------------------- #
+
+function QUAVERBATIM() {
+
+  THISCMD="% QUAVERBATIM:"
+  LASTURL=""
+
+  listSrc $*
+  getFileRange
+
+  if [ -f $COLLECTED ]; then
+
+     INDENTCOMSTART=`printf " %.0s" {1..100}`
+
+     cat $COLLECTED                           | # START ...
+     sed "s/$COMSTART/$INDENTCOMSTART&/"      | # INDENT COMMENT TO NOT BE CUT
+     cut -c ${INDENT}-                        | # REMOVE INDENT
+     sed "/^[ ]*${COMSTART} SRC/!s/</\&lt;/g" | # ENTITY FOR BRACKET
+     sed "/^[ ]*${COMSTART} SRC/!s/>/\&gt;/g" | # ENTITY FOR BRACKET
+     tee > tmp.collect                          # WRITE TO FILE
+
+      for URLNUM in `grep -n "[ ]*$COMSTART SRCURL" tmp.collect | #
+                     cut -d ":" -f 1`; 
+       do 
+          THISURL=`sed -n "${URLNUM}p" tmp.collect | #
+                   cut -d ":" -f 2- | cut -d " " -f 2`
+          if [ "X$THISURL"  != "X$LASTURL" ] &&
+             [ "X$HREFMODE" != "XOFF" ]
+           then
+                WWWLINK=`urlitzer $THISURL`
+                REFCODE=`refsrc $WWWLINK      | #
+                         sed 's/<div/<span/g' | #
+                         sed 's/<\/div>/<\/span>/g'`
+                sed -i "${URLNUM}s,^.*$,$REFCODE," tmp.collect
+          else
+                sed -i "${URLNUM}s,^.*$,," tmp.collect
+          fi
+          LASTURL="$THISURL"
+      done
+
+    write2src         "<pre class=\"quaverbatim\">"
+    cat tmp.collect   | # USELESS USE OF CAT
+    tee >> $SRCDUMP
+    write2src         "</pre>"
+
+    rm $COLLECTED tmp.collect
+  fi
+
+  if [ -f $SRCLIST ]; then rm $SRCLIST ;fi
+
+}
+
+# --------------------------------------------------------------------------- #
+
+function QUOTE() {
+
+   sleep 0;
+
+}
+
+# --------------------------------------------------------------------------- #
+
+# # 1: HTMLIN: input.html 1-2
+# # 2: HTMLIN: <img src="http://www.image.de/image.jpg" />
+# # 3:
+# # % --------------------------------
+# # % <table><tr><td>
+# # % <img src="http://www.image.de/image.jpg" />
+# # % </td></tr></table>
+# # % HTMLIN:
+
+function HTMLIN() {
+
+  THISCMD="% HTMLIN:"
+  HTMLSRCLIST=xx.list
+
+  listSrc $*
+
+
+ ( IFS=$'\n'
+
+  if [ -f $SRCLIST ]; then
+
+   mv $SRCLIST $HTMLSRCLIST
+
+   for THISSRC in `cat $HTMLSRCLIST | #
+                   sed "s/[ ]*${COMSTART}[ ]*//g" | #
+                   sed "s/[ ]*$COMCLOSE[ ]*//g"   | #
+                   sed "s/^%[ ]*//"`
+
+    do
+       ISHTML=`echo $THISSRC | sed 's/ /\n/g' | #
+               grep "\.html$" | wc -l`
+       if [ $ISHTML -gt 0 ]; then
+
+            echo "$THISSRC" > $SRCLIST
+            getFileRange "$THISSRC"
+
+            if [ -f $COLLECTED ]; then
+
+              for URLNUM in `grep -n "[ ]*$COMSTART SRCURL" $COLLECTED | #
+                             cut -d ":" -f 1`; 
+               do 
+                  THISURL=`sed -n "${URLNUM}p" $COLLECTED | #
+                           cut -d ":" -f 2- | cut -d " " -f 2`
+                  if [ "X$THISURL"  != "X$LASTURL" ] &&
+                     [ "X$HREFMODE" != "XOFF" ]
+                   then
+                        WWWLINK=`urlitzer $THISURL`
+                        REFCODE=`refsrc $WWWLINK      | #
+                                sed 's/<div/<span/g' | #
+                                sed 's/<\/div>/<\/span>/g'`
+                        sed -i "${URLNUM}s,^.*$,$REFCODE," $COLLECTED
+                  else
+                        sed -i "${URLNUM}s,^.*$,," $COLLECTED
+                  fi
+                  LASTURL="$THISURL"
+              done
+
+                 #write2src "<p>$THISURL</p>" # DEBUG
+                 #cat $COLLECTED
+                  cat $COLLECTED >> $SRCDUMP
+                  rm $COLLECTED
+            fi
+       else
+            write2src "$THISSRC"
+       fi
+  done 
+
+   rm $HTMLSRCLIST
+ fi 
+
+
+
+)
+
+}
+# --------------------------------------------------------------------------- #
+
+function WHITESPACE() {
+
+   AMOUNT=`echo $* | sed 's/[^0-9]*//g'`
+   write2src "<hr class=\"break\" style=\"height:${AMOUNT}vh\"/>"
+}
+
+
+# --------------------------------------------------------------------------- #
+
+function ANCHOR() {
+
+   if [ `echo $* | wc -w` -gt 5  ] ||  
+      [ `echo $* | wc -c` -gt 20 ]; then 
+   AID=`echo $*                   | # 
+        unaccent utf-8            | # 
+        sed 's/[^a-zA-Z1-9 _]//g' | # 
+        tr [:upper:] [:lower:]    | # 
+        tr -s ' ' | sed 's/ /_/g' | # 
+        sed 's/\(_*\)\([a-z0-9]\)\([^_.]*_*\)/\2/g'` 
+   else 
+   AID=`echo $*                 | # 
+        unaccent utf-8          | # 
+        sed 's/[^a-zA-Z1-9]//g' | # 
+        tr [:upper:] [:lower:]`   # 
+   fi
+
+   write2src "<div class=\"anchor\" id=\"$AID\"></div>"
+}
+
+
+
+
+
+
+
+
+# =========================================================================== #
+
+ function conformColor() {
+
+       sleep 0
+
+  }
+
+# =========================================================================== #
+
+  function svglayers2pdfpages() {
+
+   CROP=10.63 # 3mm in px
+
+     SVGLAYER=$1
+
+     PDFPAGES=$2
+    #PDFPAGES=`echo $2 | sed 's/\.pdf$//'`_single.pdf
+     PDFDOUBLEPAGES=`echo $2 | sed 's/\.pdf$//'`_double.pdf
+     SUPERTMP=${TMPID}.`echo $SVGL | md5sum | cut -c 1-4`.tmp
+ 
+     CANVASWIDTH=`sed ":a;N;\$!ba;s/\n//g" $SVGLAYER | # SVG WITHOUT LINEBREAKS
+                  sed 's/width=/\n&/g'               | # EXTRACT WIDTH
+                  grep "^width="                     | # EXTRACT WIDTH
+                  cut -d "\"" -f 2                   | # EXTRACT WIDTH VALUE
+                  head -n 1`                           # FIRST WIDTH ONLY
+      LAYERNAMES=`sed ":a;N;\$!ba;s/\n//g" $SVGLAYER | # SVG WITHOUT LINEBREAKS
+                  sed 's/nkscape:label/\n&/g'        | # EXTRACT LAYER NAME
+                  grep "^nkscape:label"              | # EXTRACT LAYER NAME
+                  cut -d "\"" -f 2                   | # EXTRACT LAYER NAME
+                  grep -v XX_                        | # IGNORE XX_LAYERS
+                  sort -u`                             # SORT AND UNIQ
+ 
+     BFOO=NL`echo ${RANDOM} | cut -c 1`F00
+     SFOO=SP`echo ${RANDOM} | cut -c 1`F0O
+   # ----------------------------------------------------------------------- #
+   # MOVE LAYERS ON SEPARATE LINES (TEMPORARILY; EASIFY PARSING LATER ON)
+   # ----------------------------------------------------------------------- #
+     sed ":a;N;\$!ba;s/\n/$BFOO/g" $SVGLAYER | # REMOVE ALL LINEBREAKS (BUT SAVE)
+     sed "s/ /$SFOO/g"                       | # REMOVE ALL SPACE (BUT SAVE)
+     sed 's/<g/4Fgt7RfjIoPg7/g'              | # PLACEHOLDER FOR GROUP OPEN
+     sed ':a;N;$!ba;s/\n/ /g'                | # REMOVE ALL NEW LINES
+     sed 's/4Fgt7RfjIoPg7/\n<g/g'            | # RESTORE GROUP OPEN + NEWLINE
+     sed '/groupmode="layer"/s/<g/4Fgt7R/g'  | # PLACEHOLDER FOR LAYERGROUP OPEN
+     sed ':a;N;$!ba;s/\n/ /g'                | # REMOVE ALL LINEBREAKS
+     sed 's/4Fgt7R/\n<g/g'                   | # RESTORE LAYERGROUP OPEN + NEWLINE
+     sed 's/<\/svg>//g'                      | # REMOVE SVG CLOSE
+     sed 's/display:none/display:inline/g'   | # MAKE VISIBLE EVEN WHEN HIDDEN
+     tee > ${SUPERTMP}                         # WRITE TO TEMPORARY FILE
+   # ----------------------------------------------------------------------- #
+   # WRITE LAYERS TO SEPARATE FILES AND TRANSFORM TO PDF 
+   # ----------------------------------------------------------------------- #
+     COUNT=1 
+     for LAYERNAME in $LAYERNAMES
+      do
+         for PAGE in 1 2
+          do
+             if [ $PAGE -eq 1 ]; then
+                  XSHIFT=-$CROP
+             else
+                  XSHIFT=-`python -c "print $CANVASWIDTH - $CROP"`
+             fi
+             TRANSFORM="transform=\"translate($XSHIFT,0)\""
+             NUM=`echo 0000$COUNT | rev | cut -c 1-4 | rev`
+             LNAME=`echo $LAYERNAME | md5sum | cut -c 1-6`
+
+                head -n 1 ${SUPERTMP}  | # THE HEADER
+                sed "s/$BFOO/\n/g"     | # RESTORE ORIGINAL LINEBREAKS
+                sed "s/$SFOO/ /g"      | # RESTORE ORIGINAL SPACES
+                tee                    >   ${TMPID}_${NUM}_${LNAME}.svg
+                echo "<g $TRANSFORM>"  >>  ${TMPID}_${NUM}_${LNAME}.svg
+                grep "inkscape:label=\"$LAYERNAME\"" ${SUPERTMP} | #
+                sed "s/$BFOO/\n/g"     | # RESTORE ORIGINAL LINEBREAKS
+                sed "s/$SFOO/ /g"      | # RESTORE ORIGINAL SPACES
+                tee                    >>  ${TMPID}_${NUM}_${LNAME}.svg
+                echo "</g>"            >>  ${TMPID}_${NUM}_${LNAME}.svg
+                echo "</svg>"          >>  ${TMPID}_${NUM}_${LNAME}.svg 
+    
+                inkscape --export-pdf=${TMPID}_${NUM}_${LNAME}.pdf \
+                         --export-text-to-path \
+                         ${TMPID}_${NUM}_${LNAME}.svg
+   
+               #conformColor ${TMPID}_${NUM}_${LNAME}.pdf
+
+                rm ${TMPID}_${NUM}_${LNAME}.svg
+
+             COUNT=`expr $COUNT + 1`
+          done
+
+             head -n 1 ${SUPERTMP}    | # THE HEADER
+             sed "s/$BFOO/\n/g"       | # RESTORE ORIGINAL LINEBREAKS
+             sed "s/$SFOO/ /g"        | # RESTORE ORIGINAL SPACES
+             sed "s/width=\"[^\"]*\"/width=\"1090\"/" | # MAKE FULL WIDTH
+             tee                    >   ${TMPID}_${NUM}_${LNAME}.svg
+             grep "inkscape:label=\"$LAYERNAME\"" ${SUPERTMP} | #
+             sed "s/$BFOO/\n/g"       | # RESTORE ORIGINAL LINEBREAKS
+             sed "s/$SFOO/ /g"        | # RESTORE ORIGINAL SPACES
+             tee                    >>  ${TMPID}_${NUM}_${LNAME}.svg
+             echo "</svg>"          >>  ${TMPID}_${NUM}_${LNAME}.svg
+
+             inkscape --export-pdf=${TMPID}-X_${NUM}_${LNAME}.pdf \
+                      --export-text-to-path ${TMPID}_${NUM}_${LNAME}.svg
+
+             rm ${TMPID}_${NUM}_${LNAME}.svg
+
+     done
+   # ----------------------------------------------------------------------- #
+   # MAKE MULTIPAGE PDF
+   # ----------------------------------------------------------------------- #
+     pdftk ${TMPID}_*.pdf   cat output $PDFPAGES
+     pdftk ${TMPID}-X_*.pdf cat output $PDFDOUBLEPAGES
+
+   # ----------------------------------------------------------------------- #
+   # CLEAN UP (OBSOLETE?)
+   # ----------------------------------------------------------------------- #
+     rm ${TMPID}_*.pdf ${TMPID}-X_*.pdf $SVGLAYER
+ 
+  }
+
+
+# =========================================================================== #
+
+ function mkpages() {
+
+ # TODO: check if pages exists -> ~ adjust
+
+   FIRSTPAGEIS="" # RESET
+ 
+   PDFSRC=`echo $* | sed 's/ /\n/g'    | # SPACES TO NEWLINES
+           egrep "\.svg$|\.pdf$"       | # SELECT ENDING WITH .svg/.pdf
+           head -n 1`                    # SELECT FIRST
+    PAGES=`echo $* | sed 's/ /\n/g'    | # SPACES TO NEWLINES
+           sed "/[^0-9\\-]/d"          | # NO LINES WITH MORE THAN NUMS AND -
+           egrep -v "^-|-$"            | # IGNORE ISOLATED - 
+           grep -v "^[ ]*$" | tail -n 1` # 
+      EXT=`echo $PDFSRC | rev | cut -d "." -f 1 | rev`
+ 
+   if [ `echo $PAGES | wc -c` -le 1 ]; then
+         PAGES=-
+   elif [ `echo $PAGES | grep "^[0-9]" | wc -l` -ge 1 ]; then
+         P1=`echo $PAGES | cut -d "-" -f 1`
+         if [ `python -c "print $P1 / 2.0" | #
+               cut -d "." -f 2` -lt 5 ]; then
+               FIRSTPAGEIS="even"
+         else
+               FIRSTPAGEIS="odd"
+         fi
+   else
+         PAGES=- ; PAGECOMMAND=""
+   fi
+ 
+   PDFGET=${TMPID}`echo $PDFSRC | md5sum | cut -c 1-4`.pdf
+   SVGTMP=${TMPID}`echo $PDFSRC | md5sum | cut -c 5-9`.svg
+ 
+   if [ -f $PDFGET ]; then
+        echo "$PDFGET exists"
+   else 
+        if [ "X$EXT" == "Xsvg" ]; then
+    
+              getFile $PDFSRC $SVGTMP
+    
+        if [ "X$SUCCESS" == "XYES" ]; then
+
+           SVGTMP=`realpath $SVGTMP`
+
+        # ------------------------------------------------ #
+        # MAKE IMAGE HREFS ABSOLUTE
+        # ------------------------------------------------ #
+    
+#        # TODO: if image does not exist -> substitute
+#                BUG: 160216_A5x2-dit-logo.svg
+#          IFHTTP=`echo $PDFSRC | grep "http.\?://" | wc -l`
+#          if [ $IFHTTP -lt 1 ]; then
+#          SRCPATH=`realpath $PDFSRC | rev | #
+#                   cut -d "/" -f 2- | rev`
+#          SRCSRC=`basename $PDFSRC`
+#          cd $SRCPATH
+#            for XLINK in `cat $SRCSRC            | #
+#                          sed "s/$XLINKID/\n&/g" | #
+#                          grep "$XLINKID"`         #
+#             do
+#               IMGSRC=`echo $XLINK         | #
+#                       cut -d "\"" -f 2    | #
+#                       cut -d "\"" -f 2    | #
+#                       sed "s/$XLINKID//g" | #
+#                       sed 's,file://,,g'`   #
+#               IMG=`basename $IMGSRC`
+#               IMGPATH=`realpath $IMGSRC | rev | # 
+#                        cut -d "/" -f 2- | rev`  #
+#               ABSPATH=`realpath $IMGPATH`
+#               NEWXLINK="$XLINKID=\"$ABSPATH/$IMG\""
+#               sed -i "s,$XLINK,$NEWXLINK,g" $SVGTMP
+#               echo "$XLINK -> $NEWXLINK"
+#            done
+#          cd - > /dev/null
+#         fi
+              svglayers2pdfpages $SVGTMP $PDFGET
+        fi
+    
+        elif [ "X$EXT" == "Xpdf" ]; then
+    
+               getFile $PDFSRC $PDFGET   
+              #conformColor $PDFGET
+        fi
+   fi
+ }
+
+# =========================================================================== #
+
+  function mktable() {
+
+    COLS=$1
+  
+    ACNT=1 # ALL COUNT
+    CCNT=1 # COL COUNT
+    ECNT=`echo $*          | #
+          cut -d " " -f 2- | #
+          sed 's/|/\n/g'   | #
+          wc -l $ELEMENTS  | # COUNT ELEMENTS 
+          cut -d " " -f 1`   # SELECT FIELD
+    CLASSPLUS=CP$RANDOM
+  
+    write2src "<table class=\"pp $CLASSPLUS\">"
+    write2src "<tr>"
+  
+    while [ $ACNT -le $ECNT ] ||
+          [ $CCNT -le $COLS ]
+     do
+        ELEMENT=`echo $*           | #
+                 cut -d " " -f 2-  | #
+                 sed 's/|/\n/g'    | #
+                 head -n $ACNT     | #
+                 tail -n 1`          #
+       #IMG=$IMGDIR/`echo $ELEMENT | sed 's/[^a-z0-9]//g'`.svg
+        IMG="$ELEMENT"
+  
+        if   [ $CCNT -eq 1 ]; then
+             write2src "<td class=\"l\">" # LEFT
+            #write2src "<td align=\"left\">" # LEFT
+        elif [ $CCNT -eq $COLS ]; then
+             write2src "<td class=\"r\">" # RIGHT
+            #write2src "<td align=\"right\">" # RIGHT
+        else
+             write2src "<td class=\"c\">" # CENTER
+            #write2src "<td align=\"center\">" # CENTER
+        fi
+        if [ $ACNT -le $ECNT ]; then
+            #w "<img src =\"$IMG\"/>"
+             write2src "$IMG"
+        fi
+        write2src "</td>"
+  
+        CCNT=`expr $CCNT + 1`
+        ACNT=`expr $ACNT + 1`
+        if [ $CCNT -gt $COLS ] &&
+           [ $ACNT -le $ECNT ]
+        then
+            write2src "</tr>"
+              CCNT=1
+            write2src "<tr>"
+        fi
+    done
+  
+    write2src "</tr>"
+    write2src "</table>"
+ }
+
+
+# =========================================================================== #
+# =========================================================================== #
+
+
+
+function SPREAD() {
+
+ # TODO: if image -> do not export svg
+
+   THISCMD="% SPREAD:"
+   PLUSCLASS=`echo $* | sed 's/class:/\nclass:/g' | # class: + NEWLINE
+              grep "^class:" | cut -d ":" -f 2` # SELECT CLASS
+
+   if [ `echo $PLUSCLASS | grep "v" | wc -l` -gt 0 ]; then
+         SELECTTYPE=".svg"
+   else
+         SELECTTYPE=""
+   fi
+
+   PDFSRC=`echo $* | sed 's/ /\n/g'    | # SPACES TO NEWLINES
+           egrep "\.svg$|\.pdf$"       | # SELECT ENDING WITH .svg/.pdf
+           head -n 1`                    # SELECT FIRST
+    PAGES=`echo $* | sed 's/ /\n/g'    | # SPACES TO NEWLINES
+           sed "/[^0-9\\-]/d"          | # NO LINES WITH MORE THAN NUMS AND -
+           egrep -v "^-|-$"            | # IGNORE ISOLATED - 
+           grep -v "^[ ]*$" | tail -n 1` #  
+   if [ `echo $PAGES | wc -c` -le 1 ]; then PAGES=- ; fi
+
+   EXPORTBASE=`echo $PDFSRC | md5sum | cut -c 1-10`
+
+
+   if [ `ls $HTMLSRCDIR/${EXPORTBASE}* 2> /dev/null | #
+         wc -l` -gt 0 ]; then
+         echo "export exists"
+   else
+
+ # -------------------------------------------------------- #
+ # WHAT HAPPENS HERE ????????
+ # -------------------------------------------------------- #
+   mkpages $*
+
+ # -------------------------------------------------------- #
+ # DOUBLE PAGES
+ # -------------------------------------------------------- #
+   if [ `ls ${TMPID}${EXPORTBASE}_[0-9]*.pdf 2> /dev/null | # IF NOT YET DONE
+         wc -l` -lt  1 ]; then
+         pdftk $PDFDOUBLEPAGES burst \
+               output ${TMPID}${EXPORTBASE}_%05d.pdf
+       PN=1
+       for DOUBLEPAGE in `ls ${TMPID}${EXPORTBASE}_*.pdf`
+        do
+           EXPORTNUM="${PN}-$((PN + 1))"
+           EXPORTNAME="${EXPORTBASE}_${EXPORTNUM}"
+           mv $DOUBLEPAGE ${TMPID}${EXPORTNAME}.pdf
+           PN=`expr $PN + 2`
+       done
+   fi
+ # -------------------------------------------------------- #
+ # SINGLE PAGES
+ # -------------------------------------------------------- #
+   if [ `ls ${TMPID}${EXPORTBASE}_[0-9]*.png 2> /dev/null | # IF NOT YET DONE
+         wc -l` -lt  1 ]; then
+       # TODO: add crop
+         convert $PDFGET -scene 1 ${TMPID}${EXPORTBASE}_%05d.png  
+         pdftk $PDFGET burst output ${TMPID}${EXPORTBASE}_%05d.pdf
+         rm doc_data.txt
+   fi
+
+ # -------------------------------------------------------- #
+ # EXPORT ALL DOUBLE PAGES TODO: works without PAIR EXPORT FROM DOUBLEPAGE !
+ # -------------------------------------------------------- #
+#  REGION="-crop 417x592+10+10 +repage"
+
+#  CNT=1 ; PN=1 # KEEP ON COUNTING
+#  for PAGESELECTION in `ls ${TMPID}${EXPORTBASE}_[0-9]*.png`
+#    do
+#        PAIR="$PAIR \( $PAGESELECTION $REGION -flatten -coalesce -append \)"
+#        CNT=`expr $CNT + 1`
+#        if [ $CNT -gt 2 ]; then
+#
+#           EXPORTNUM="${PN}-$((PN + 1))"
+#           EXPORTNAME="${EXPORTBASE}_${EXPORTNUM}"
+#           EXPORTFULL=$HTMLSRCDIR/${EXPORTNAME}.png
+#           eval "convert $PAIR +append -gravity west ${EXPORTFULL}"
+#           EXPORTFULL=$HTMLSRCDIR/${EXPORTNAME}.svg
+#           PDFNOW=${TMPID}${EXPORTNAME}.pdf
+#           inkscape --export-plain-svg=${EXPORTFULL} ${PDFNOW}
+#           PAIR=""; CNT=1 # RESET
+#           PN=`expr $PN + 2`
+#        fi
+#   done
+#        if [ `echo $PAIR | wc -c` -gt 1 ]; then
+#
+#           EXPORTNAME="${EXPORTBASE}_${PX}-X"
+#           EXPORTFULL=$HTMLSRCDIR/${EXPORTNAME}.png
+#           eval "convert $PAIR +append \
+#                               -gravity west ${EXPORTFULL}"
+#           PDFLAST=`echo $PAGESELECTION | sed 's/\.png$/.pdf/'`
+#           EXPORTFULL=$HTMLSRCDIR/${EXPORTNAME}.svg
+#           inkscape --export-plain-svg=${EXPORTFULL} ${PDFLAST}
+#        fi
+#        PAIR="" # RESET
+
+   for DOUBLEPAGE in `ls ${TMPID}${EXPORTBASE}_*.pdf | #
+                      grep "[0-9]*-[0-9]*.pdf$"`
+     do
+        EXPORTNUM=`echo $DOUBLEPAGE | #
+                   cut -d "_" -f 2  | #
+                   sed 's/\.pdf$//' | #
+                   sed 's/^_//'`
+        EXPORTNAME="${EXPORTBASE}_${EXPORTNUM}"
+        EXPORTFULL=$HTMLSRCDIR/${EXPORTNAME}.png
+        convert -density 300 -resize 1000 $DOUBLEPAGE \
+                -flatten $EXPORTFULL
+        EXPORTFULL=$HTMLSRCDIR/${EXPORTNAME}.svg
+        inkscape --export-plain-svg=${EXPORTFULL} ${DOUBLEPAGE}
+    done
+
+ # -------------------------------------------------------- #
+ # EXPORT ALL SINGLE PAGES
+ # -------------------------------------------------------- #
+
+   PN=1
+   for PAGE in `ls ${TMPID}${EXPORTBASE}_*.pdf | #
+                grep "_[0-9]*.pdf$"`
+    do
+       PNPAD=`echo 00$PN | rev | cut -c 1-3 | rev`
+       EXPORTNAME="${EXPORTBASE}_${PNPAD}"
+       EXPORTFULL=$HTMLSRCDIR/${EXPORTNAME}.png
+       convert -density 300 -resize 700 $PAGE \
+               -flatten $EXPORTFULL
+       cp $PAGE JUNK/mkthumb
+       EXPORTFULL=$HTMLSRCDIR/${EXPORTNAME}.svg
+       PAGE=`echo $PAGE | sed 's/\.png$/.pdf/'`
+       inkscape --export-plain-svg=${EXPORTFULL} ${PAGE}
+       PN=`expr $PN + 1`
+   done
+
+       rm ${TMPID}${EXPORTBASE}_*.p*  # SAVE DISKSPACE
+  fi
+
+
+ # -------------------------------------------------------- #
+ # CHECK PAGES
+ # -------------------------------------------------------- #
+   if [ `echo $PAGES | grep "^-$" | wc -l` -gt 0 ]; then
+         PA="1"
+         PX=`ls $HTMLSRCDIR/${EXPORTBASE}* | #
+             grep "_[0-9]*.png$"           | #
+             wc -l`
+         PAGES="${PA}-${PX}"
+  fi
+     if [ "X$HREFMODE" != "XOFF" ]
+           then
+                WWWLINK=`urlitzer $*`
+                REFCODE=`refsrc $WWWLINK`
+                write2src "$REFCODE"
+     fi
+
+ # -------------------------------------------------------- #
+ # WRITE HTML ACCORDING TO PAGE SELECTION
+ # -------------------------------------------------------- #
+   PA=`echo $PAGES | cut -d "-" -f 1`
+   PX=`echo $PAGES | cut -d "-" -f 2`
+
+   CNT=$PA
+   while [ $CNT -lt $PX ]; do
+
+        TAKETHIS=`ls -S $HTMLSRCDIR/${EXPORTBASE}* | #
+                  grep "_${CNT}-[0-9]*"           | # 
+                  grep "$SELECTTYPE$"            | #
+                  tail -n 1`                      #
+
+        if [ `echo $TAKETHIS | wc -c` -gt 2 ]; then
+
+             IMGPFAD=$HTMLSRCDIRNAME/`basename $TAKETHIS`
+             if [ `echo $TAKETHIS | grep ".svg$" | wc -l` -gt 0 ]
+             then IMGCLASSPLUS="v"; else IMGCLASSPLUS=""; fi
+              write2src "<table class=\"spread full $PLUSCLASS\"><tr><td>"
+              write2src "<img src=\"$IMGPFAD\" alt=\"\"  \
+                          class=\"$IMGCLASSPLUS $PLUSCLASS\" />"
+              write2src '</td></tr></table>' 
+             CNT=`expr $CNT + 1`
+        else
+
+        TAKETHIS=`ls -S $HTMLSRCDIR/${EXPORTBASE}* | #
+                  grep "_0*${CNT}\."                 | #
+                  grep "$SELECTTYPE$"            | #
+                  tail -n 1`                      #
+             IMGPFAD=$HTMLSRCDIRNAME/`basename $TAKETHIS`
+             if [ `echo $TAKETHIS | grep ".svg$" | wc -l` -gt 0 ]
+             then IMGCLASSPLUS="v"; else IMGCLASSPLUS=""; fi
+              write2src "<table class=\"spread half right $PLUSCLASS\"><tr><td>"
+              write2src "<img src=\"$IMGPFAD\" alt=\"\" \
+                          class=\"$IMGCLASSPLUS $PLUSCLASS\" />"
+              write2src '</td></tr></table>' 
+        fi
+        CNT=`expr $CNT + 1`
+   done
+       if [ $CNT -le $PX ]; then
+        TAKETHIS=`ls -S $HTMLSRCDIR/${EXPORTBASE}* | #
+                  grep "_0*${CNT}\."              | #
+                  grep "$SELECTTYPE$"            | #
+                  tail -n 1`                      #
+
+        if [ `echo $TAKETHIS | wc -c` -gt 2 ]; then
+             IMGPFAD=$HTMLSRCDIRNAME/`basename $TAKETHIS`
+             if [ `echo $TAKETHIS | grep ".svg$" | wc -l` -gt 0 ]
+             then IMGCLASSPLUS="v"; else IMGCLASSPLUS=""; fi
+             write2src "<table class=\"spread half left $PLUSCLASS\"><tr><td>"
+             write2src "<img src=\"$IMGPFAD\" alt=\"\" \
+                         class=\"$IMGCLASSPLUS $PLUSCLASS\" />"
+             write2src '</td></tr></table>' 
+        fi
+       fi
+}
+
+# --------------------------------------------------------------------------- #
+
+function PP(){
+
+   PPCOLLECT="" # RESET
+       PPSEP="% ------------------------"
+    PPSEPNUM=`grep -n "$PPSEP" $SRCDUMP | #
+              tail -n 1                 | #
+              cut -d ":" -f 1`
+    REFID=`echo $*             | # START PIPE
+           sed 's/REF:/\n&/'   | #
+           grep "^REF:"        | #
+           head -n 1           | #
+           cut -d ":" -f 2     | #
+           sed 's/^[ \t]*//'   | # REMOVE LEADING WHITESPACE
+           sed 's/[ \t]*$//'   | # REMOVE TRAILING WHITESPACE
+           md5sum | cut -c 1-10` # CREATE UNIQUE ID
+    PPPDFS=`sed "1,${PPSEPNUM}d" $SRCDUMP  | # PRINT FROM LINENUM TO END
+            grep -v "^% PP"                | # IGNORE COMMAND ITSELF
+            sed "s/[ ]*${COMSTART}[ ]*//g" | #
+            sed "s/[ ]*$COMCLOSE[ ]*//g"   | #
+            sed "s/^%[ ]*$/X.pdf/"         | # ALLOW EMPTY (=TO SHIFT)
+            grep "\.pdf$"                  | # SELECT LINES WITH .pdf EXTENSION
+            sed "s/^%//"                   | # REMOVE LEADING %
+            sed "s/^[ ]*//"`                 # REMOVE ALL LEADING BLANKS
+    PPNUM=`echo $PPPDFS |  sed 's/ /\n/g' | wc -l` # COUNT
+
+    sed "1,${PPSEPNUM}d" $SRCDUMP  | # PRINT FROM LINENUM TO END
+            grep -v "^% PP"                | # IGNORE COMMAND ITSELF
+            sed "s/[ ]*${COMSTART}[ ]*//g" | #
+            sed "s/[ ]*$COMCLOSE[ ]*//g"
+
+
+    for PDFSRC in $PPPDFS
+     do
+        if [ "X$PDFSRC" == "XX.pdf" ]; then
+              PPCOLLECT=`echo "$PPCOLLECT|" | sed 's/^|//'`
+        else
+
+         PDFGET=${TMPID}`echo $PDFSRC | #
+                         md5sum       | #
+                         cut -c 1-4`.pdf
+         PDFNAME=`echo $PDFSRC        | #
+                  rev                 | #
+                  cut -d "/" -f 1     | #
+                  cut -d "." -f 2-    | #
+                  rev`
+         PDFPFAD=`echo $PDFSRC        | #
+                  sed "s,http://,,"   | #
+                  cut -d "/" -f 2-`     #
+
+            ID=`echo $PDFNAME | md5sum | cut -c 1-8`
+        IFHTTP=`echo $PDFSRC | grep "http.\?://" | wc -l`
+        if [ $IFHTTP -ge 1 ]; then
+        URL=$PDFSRC;
+        SEEME=`grep $ID $IDGET  | #
+               grep $PDFPFAD    | #
+               head -n 1        | #
+               cut -d ":" -f 3-`
+         if [ `echo $SEEME | wc -c` -gt 2 ]; then
+               AHREF="<a href=\"$SEEMEBASE${SEEME}#${ID}\">"
+          else
+               AHREF="<a href=\"${PDFSRC}\">"
+         fi
+               FERHA="</a>"
+        else
+           AHREF=""
+           FERHA=""
+        fi
+
+         THUMB=${HTMLSRCDIR}/OO_`echo $PDFSRC  | #
+                                 md5sum        | #
+                                 cut -c 1-8`.gif #
+         THUMBSRC=${HTMLSRCDIRNAME}/OO_`echo $PDFSRC | #
+                                        md5sum       | #
+                                        cut -c 1-8`.gif
+         if [ ! -f $THUMB ]; then
+
+          if [ ! -f $PDFGET ]; then
+                getFile $PDFSRC $PDFGET 
+                if [ -f $PDFGET ]; then
+
+               #convert -resize 398 $PDFGET \
+               #+antialias -background white -alpha remove \
+               #-bordercolor "#000000" -border 1 $THUMB
+
+                convert -density 300 -resize 400 ${PDFGET}[0] +antialias \
+                -background white -alpha remove $THUMB
+
+                fi
+           else
+               echo "$THUMB exists"
+          fi
+         fi
+         if [ -f $THUMB ]; then
+ 
+             PPNEW="$AHREF<img src=\"$THUMBSRC\" alt=\"\" id=\"$ID\"/>$FERHA"
+             PPCOLLECT=`echo "$PPCOLLECT|$PPNEW" | sed 's/^|//'`
+         fi
+        fi
+
+    done
+
+    if   [ $PPNUM -lt 2 ]; then
+           mktable 1 "$PPCOLLECT"
+           sed -i "s/$CLASSPLUS/t1/g" $SRCDUMP
+    elif [ $PPNUM -lt 3 ]; then
+           mktable 2 "$PPCOLLECT"
+           sed -i "s/$CLASSPLUS/t2/g" $SRCDUMP
+    elif [ $PPNUM -lt 4 ]; then
+           mktable 3 "$PPCOLLECT"
+           sed -i "s/$CLASSPLUS/t3/g" $SRCDUMP
+    elif [ $PPNUM -lt 5 ]; then
+           mktable 4 "$PPCOLLECT"
+           sed -i "s/$CLASSPLUS/t4/g" $SRCDUMP
+    elif [ $PPNUM -eq 9 ]; then
+           mktable 3 "$PPCOLLECT"
+           sed -i "s/$CLASSPLUS/t9/g" $SRCDUMP
+    else
+           mktable 6 "$PPCOLLECT"
+           sed -i "s/$CLASSPLUS/tx/g" $SRCDUMP
+    fi
+
+    sed -i "s/[ ]*$CLASSPLUS[ ]*//g" $SRCDUMP # RM WHATEVER'S LEFT
+
+}
+
+# --------------------------------------------------------------------------- #
+
+function SOFTWAREUSED() {
+
+  MANBASE="http://freeze.sh/man"
+  LISTSRC="$1"
+  LISTGET=${TMPID}`echo $1 | md5sum | cut -c 1-4`.list
+
+  if [ ! -f $LISTGET ]; then
+       getFile $LISTSRC $LISTGET
+  fi
+  if [ -f $LISTGET ]; then
+
+  write2src "<p class=\"full\">"
+
+ ( IFS=$'\n'
+   for ITEM in `cat $LISTGET`
+    do
+       PROGRAM=`echo $ITEM | cut -d "-" -f 1`
+       DESCRIPTION=`echo $ITEM | cut -d "-" -f 2- | sed 's/^[ ]*//'`
+
+       echo $PROGRAM $DESCRIPTION
+
+       MANURL=$MANBASE/$PROGRAM;
+       RESPONSE=`curl -s -o /dev/null -IL -w "%{http_code}" $MANURL`
+       if [ $RESPONSE == '200' ]; then
+            PROGRAM="<a href=\"$MANURL\">$PROGRAM</a>"
+       fi
+
+       write2src "<span class="nobreak"><tt>$PROGRAM</tt> (</span>${DESCRIPTION})"
+
+   done
+ )
+
+ write2src "</p>"
+
+  fi
+}
+
+
+# --------------------------------------------------------------------------- #
+
+
+function PDF() {
+
+  listSrc $*
+
+ ( IFS=$'\n'
+  for ITEM in `cat $SRCLIST`
+   do
+      PDFSRC=`echo $ITEM | sed 's/ /\n/g'  | # SPACES TO NEWLINES
+              grep "\.pdf$" | head -n 1`     # SELECT FIRST ENDING WITH .pdf 
+       PAGES=`echo $ITEM | sed "s/#/\n#/g" | # HASH TO NEWLINES
+              grep -v "^#"                 | # IGNORE HASH LINES
+              sed 's/ /\n/g'               | # SPACES TO NEWLINES
+              sed "/[^0-9\\-]/d"           | # NO LINES WITH MORE THAN NUMS AND -
+              egrep -v "^-|-$"             | # IGNORE ISOLATED - 
+              grep -v "^[ ]*$" | tail -n 1`  # NO EMPTY / LAST LINE ONLY
+
+      if [ `echo $PAGES | wc -c` -le 1 ]; then
+            PAGES=-
+      fi
+      OPTIONS=`echo $ITEM | sed "s/#/\n#/g"       | #
+               grep "^#" | tail -n 1              | #
+               cut -d "#" -f 2 | sed 's/^[ \t]*//'` # 
+      if [ `echo $OPTIONS | wc -c` -gt 1 ]; then
+            OPTIONS=",$OPTIONS"
+      fi
+
+   PDFGET=${TMPID}`echo $PDFSRC | md5sum | cut -c 1-4`.pdf
+   if [ ! -f $PDFGET ]; then
+         getFile $PDFSRC $PDFGET
+   fi
+   if [ -f $PDFGET ]; then
+
+         EXPORTBASE=`echo $PDFSRC | md5sum | cut -c 1-10`
+
+         convert $PDFGET ${TMPID}${EXPORTBASE}_%05d.png  
+        
+      if [ `echo $PAGES | grep "^-$" | wc -l` -gt 0 ]; then
+            PA="1"
+            PX=`pdftk $PDFGET dump_data output | #
+                grep -i NumberofPages | cut -d ":" -f 2 | #
+                sed 's/ //g'`
+            PAGES="${PA}-${PX}"
+            echo $PAGES
+      fi
+      PA=`echo $PAGES | cut -d "-" -f 1`
+      PX=`echo $PAGES | cut -d "-" -f 2`
+
+   PN=$PA
+
+   for THISPAGE in `ls ${TMPID}${EXPORTBASE}_[0-9]*.png | #
+                    sed -n "${PA},${PX}p"`
+     do
+            EXPORTNUM="${PN}-$((PN + 1))"
+            EXPORTNAME="${EXPORTBASE}_${EXPORTNUM}.png"
+            EXPORTFULL=$HTMLSRCDIR/${EXPORTNAME}
+            convert $THISPAGE -flatten $EXPORTFULL
+            IMGPFAD="$HTMLSRCDIRNAME/$EXPORTNAME"
+            write2src "<img src=\"$IMGPFAD\" class=\"pdf\" />"
+            PN=`expr $PN + 1`
+    done
+
+   fi
+
+  done )
+
+  if [ -f $SRCLIST ]; then rm $SRCLIST ;fi
+
+}
+
+# --------------------------------------------------------------------------- #
+
+function FPIFY() {
+
+  sed -i 's/Freeze+Press/<span class="fp">&<\/span>/g' $SRCDUMP
+
+}
+
+# --------------------------------------------------------------------------- #
+
