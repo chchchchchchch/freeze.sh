@@ -1,0 +1,1436 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- CLEANED: 1496071335/fd6a71349a95c582ddbc0b9757b60894 -->
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="800"
+   height="350"
+   id="svg3458"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="assembyasbinary.svg">
+  <defs
+     id="defs3460" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#f0f0f0"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="1"
+     inkscape:pageshadow="2"
+     inkscape:document-units="px"
+     showgrid="false" />
+  <metadata
+     id="metadata3463">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="XX_IMAGE"
+     inkscape:groupmode="layer"
+     id="layer1"
+     sodipodi:insensitive="true"
+     style="display:inline">
+    <image
+       id="image246"
+       xlink:href="data:image/png;base64,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"
+       x="16.392885"
+       y="451.37506"
+       width="750"
+       height="246" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="XX_BUILD"
+     style="opacity:0.6;display:none">
+    <path
+       style="color:#000000;fill:#00ff00;stroke:none;stroke-width:1.99999988;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 422.5,508.5 33,0 0,33 -33,0 z"
+       id="path3812"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       sodipodi:nodetypes="ccccc"
+       id="path3810"
+       d="m 388.5,508.5 33,0 0,33 -33,0 z"
+       style="color:#000000;fill:#00ff00;stroke:none;stroke-width:1.99999988;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:#00ff00;stroke:none;stroke-width:1.99999988;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 356.5,508.5 32,0 0,33 -32,0 z"
+       id="path3808"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       sodipodi:nodetypes="ccccc"
+       id="path3780"
+       d="m 255.5,596.5 33,0 0,33 -33,0 z"
+       style="color:#000000;fill:#00ff00;stroke:none;stroke-width:1.99999988;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:#00ff00;stroke:none;stroke-width:1.99999988;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 221.5,596.5 34,0 0,33 -34,0 z"
+       id="path3782"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       style="color:#000000;fill:#00ff00;stroke:none;stroke-width:1.99999988;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 255.5,552.5 33,0 0,33 -33,0 z"
+       id="path3774"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       sodipodi:nodetypes="ccccc"
+       id="path3772"
+       d="m 221.5,552.5 34,0 0,33 -34,0 z"
+       style="color:#000000;fill:#00ff00;stroke:none;stroke-width:1.99999988;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:none;stroke:#ff0000;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 221.5,552.5 67,0 0,33 -67,0 z"
+       id="rect2995"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       sodipodi:nodetypes="ccccc"
+       id="path3766"
+       d="m 221.5,596.5 67,0 0,33 -67,0 z"
+       style="color:#000000;fill:none;stroke:#ff0000;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:none;stroke:#ff0000;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 255.5,629.5 0,-33"
+       id="path3768"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="cc"
+       id="path3770"
+       d="m 255.5,586.5 0,-33"
+       style="color:#000000;fill:none;stroke:#ff0000;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       sodipodi:nodetypes="ccccc"
+       id="path3784"
+       d="m 255.5,508.5 33,0 0,33 -33,0 z"
+       style="color:#000000;fill:#00ff00;stroke:none;stroke-width:1.99999988;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:#00ff00;stroke:none;stroke-width:1.99999988;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 221.5,508.5 34,0 0,33 -34,0 z"
+       id="path3786"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       sodipodi:nodetypes="ccccc"
+       id="path3788"
+       d="m 221.5,508.5 67,0 0,33 -67,0 z"
+       style="color:#000000;fill:none;stroke:#ff0000;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:none;stroke:#ff0000;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 255.5,542.5 0,-33"
+       id="path3790"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="ccccc"
+       id="path3794"
+       d="m 322.5,508.5 34,0 0,33 -34,0 z"
+       style="color:#000000;fill:#00ff00;stroke:none;stroke-width:1.99999988;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:none;stroke:#ff0000;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 322.5,508.5 133,0 0,33 -133,0 z"
+       id="path3796"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       sodipodi:nodetypes="cc"
+       id="path3798"
+       d="m 356.5,542.5 0,-33"
+       style="color:#000000;fill:none;stroke:#ff0000;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:none;stroke:#ff0000;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 389,542.5 0,-33"
+       id="path3804"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="cc"
+       id="path3806"
+       d="m 422,542.5 0,-33"
+       style="color:#000000;fill:none;stroke:#ff0000;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       sodipodi:nodetypes="ccccc"
+       id="path3814"
+       d="m 422.5,552.5 33,0 0,33 -33,0 z"
+       style="color:#000000;fill:#00ff00;stroke:none;stroke-width:1.99999988;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:#00ff00;stroke:none;stroke-width:1.99999988;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 388.5,552.5 33,0 0,33 -33,0 z"
+       id="path3816"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       sodipodi:nodetypes="ccccc"
+       id="path3818"
+       d="m 356.5,552.5 32,0 0,33 -32,0 z"
+       style="color:#000000;fill:#00ff00;stroke:none;stroke-width:1.99999988;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:#00ff00;stroke:none;stroke-width:1.99999988;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 322.5,552.5 34,0 0,33 -34,0 z"
+       id="path3820"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       sodipodi:nodetypes="ccccc"
+       id="path3822"
+       d="m 322.5,552.5 133,0 0,33 -133,0 z"
+       style="color:#000000;fill:none;stroke:#ff0000;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:none;stroke:#ff0000;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 356.5,586.5 0,-33"
+       id="path3824"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="cc"
+       id="path3826"
+       d="m 389,586.5 0,-33"
+       style="color:#000000;fill:none;stroke:#ff0000;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:none;stroke:#ff0000;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 422,586.5 0,-33"
+       id="path3828"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="color:#000000;fill:#00ff00;stroke:none;stroke-width:1.99999988;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 422.5,596.5 33,0 0,33 -33,0 z"
+       id="path3830"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       sodipodi:nodetypes="ccccc"
+       id="path3832"
+       d="m 388.5,596.5 33,0 0,33 -33,0 z"
+       style="color:#000000;fill:#00ff00;stroke:none;stroke-width:1.99999988;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:#00ff00;stroke:none;stroke-width:1.99999988;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 356.5,596.5 32,0 0,33 -32,0 z"
+       id="path3834"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       sodipodi:nodetypes="ccccc"
+       id="path3836"
+       d="m 322.5,596.5 34,0 0,33 -34,0 z"
+       style="color:#000000;fill:#00ff00;stroke:none;stroke-width:1.99999988;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:none;stroke:#ff0000;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 322.5,596.5 133,0 0,33 -133,0 z"
+       id="path3838"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       sodipodi:nodetypes="cc"
+       id="path3840"
+       d="m 356.5,630.5 0,-33"
+       style="color:#000000;fill:none;stroke:#ff0000;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:none;stroke:#ff0000;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 389,630.5 0,-33"
+       id="path3842"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="cc"
+       id="path3844"
+       d="m 422,630.5 0,-33"
+       style="color:#000000;fill:none;stroke:#ff0000;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       sodipodi:nodetypes="ccccc"
+       id="path3846"
+       d="m 490.5,508.5 267,0 0,33 -267,0 z"
+       style="color:#000000;fill:none;stroke:#ff0000;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:none;stroke:#ff0000;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 523,542.5 0,-33"
+       id="path3848"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="cc"
+       id="path3850"
+       d="m 557,542.5 0,-33"
+       style="color:#000000;fill:none;stroke:#ff0000;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:none;stroke:#ff0000;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 590,542.5 0,-33"
+       id="path3852"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="cc"
+       id="path3854"
+       d="m 624,542.5 0,-33"
+       style="color:#000000;fill:none;stroke:#ff0000;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:none;stroke:#ff0000;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 657,542.5 0,-33"
+       id="path3856"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="cc"
+       id="path3858"
+       d="m 690,542.5 0,-33"
+       style="color:#000000;fill:none;stroke:#ff0000;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:none;stroke:#ff0000;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 724,542.5 0,-33"
+       id="path3860"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="color:#000000;fill:none;stroke:#ff0000;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 757.5,643.5 0,15 -267,0 0,-15"
+       id="path3896"
+       sodipodi:nodetypes="cccc" />
+    <path
+       sodipodi:nodetypes="cccc"
+       id="path3898"
+       d="m 455.5,643.5 0,15 -233,0 0,-15"
+       style="color:#000000;fill:none;stroke:#ff0000;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ff0000;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       x="23.653221"
+       y="474.76248"
+       id="text3900"
+       sodipodi:linespacing="141%"><tspan
+         sodipodi:role="line"
+         id="tspan3902"
+         x="23.653221"
+         y="474.76248">assembly</tspan></text>
+    <text
+       sodipodi:linespacing="141%"
+       id="text3904"
+       y="474.76248"
+       x="218.65323"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ff0000;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       xml:space="preserve"><tspan
+         y="474.76248"
+         x="218.65323"
+         id="tspan3906"
+         sodipodi:role="line">binary</tspan></text>
+    <text
+       sodipodi:linespacing="141%"
+       id="text3908"
+       y="531.76245"
+       x="23.653221"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ff0000;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       xml:space="preserve"><tspan
+         y="531.76245"
+         x="23.653221"
+         id="tspan3910"
+         sodipodi:role="line">ANDLW</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ff0000;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       x="23.653221"
+       y="575.76245"
+       id="text3912"
+       sodipodi:linespacing="141%"><tspan
+         sodipodi:role="line"
+         id="tspan3914"
+         x="23.653221"
+         y="575.76245">ADDWF</tspan></text>
+    <text
+       sodipodi:linespacing="141%"
+       id="text3916"
+       y="620.76245"
+       x="23.653221"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ff0000;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       xml:space="preserve"><tspan
+         y="620.76245"
+         x="23.653221"
+         id="tspan3918"
+         sodipodi:role="line">ANDWF</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ff0000;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       x="110.65322"
+       y="531.76245"
+       id="text3920"
+       sodipodi:linespacing="141%"><tspan
+         sodipodi:role="line"
+         id="tspan3922"
+         x="110.65322"
+         y="531.76245">k</tspan></text>
+    <text
+       sodipodi:linespacing="141%"
+       id="text3932"
+       y="575.76245"
+       x="110.65322"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ff0000;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       xml:space="preserve"><tspan
+         y="575.76245"
+         x="110.65322"
+         id="tspan3934"
+         sodipodi:role="line">f, d</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ff0000;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       x="110.65322"
+       y="620.76245"
+       id="text3940"
+       sodipodi:linespacing="141%"><tspan
+         sodipodi:role="line"
+         id="tspan3942"
+         x="110.65322"
+         y="620.76245">f, d</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ff0000;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       x="288.65323"
+       y="685.76245"
+       id="text3944"
+       sodipodi:linespacing="141%"><tspan
+         sodipodi:role="line"
+         id="tspan3946"
+         x="288.65323"
+         y="685.76245">opcode</tspan></text>
+    <text
+       sodipodi:linespacing="141%"
+       id="text3948"
+       y="685.76245"
+       x="580.6532"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ff0000;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       xml:space="preserve"><tspan
+         y="685.76245"
+         x="580.6532"
+         id="tspan3950"
+         sodipodi:role="line">operands</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       x="506.0932"
+       y="532.76245"
+       id="text3952"
+       sodipodi:linespacing="141%"><tspan
+         sodipodi:role="line"
+         id="tspan3954"
+         x="506.0932"
+         y="532.76245">k</tspan></text>
+    <text
+       sodipodi:linespacing="141%"
+       id="text3956"
+       y="532.76245"
+       x="540.0932"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       xml:space="preserve"><tspan
+         y="532.76245"
+         x="540.0932"
+         id="tspan3958"
+         sodipodi:role="line">k</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       x="575.0932"
+       y="532.76245"
+       id="text3960"
+       sodipodi:linespacing="141%"><tspan
+         sodipodi:role="line"
+         id="tspan3962"
+         x="575.0932"
+         y="532.76245">k</tspan></text>
+    <text
+       sodipodi:linespacing="141%"
+       id="text3964"
+       y="532.76245"
+       x="609.0932"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       xml:space="preserve"><tspan
+         y="532.76245"
+         x="609.0932"
+         id="tspan3966"
+         sodipodi:role="line">k</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       x="643.0932"
+       y="532.76245"
+       id="text3968"
+       sodipodi:linespacing="141%"><tspan
+         sodipodi:role="line"
+         id="tspan3970"
+         x="643.0932"
+         y="532.76245">k</tspan></text>
+    <text
+       sodipodi:linespacing="141%"
+       id="text3972"
+       y="532.76245"
+       x="673.0932"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       xml:space="preserve"><tspan
+         y="532.76245"
+         x="673.0932"
+         id="tspan3974"
+         sodipodi:role="line">k</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       x="707.0932"
+       y="532.76245"
+       id="text3976"
+       sodipodi:linespacing="141%"><tspan
+         sodipodi:role="line"
+         id="tspan3978"
+         x="707.0932"
+         y="532.76245">k</tspan></text>
+    <text
+       sodipodi:linespacing="141%"
+       id="text3980"
+       y="532.76245"
+       x="741.0932"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       xml:space="preserve"><tspan
+         y="532.76245"
+         x="741.0932"
+         id="tspan3982"
+         sodipodi:role="line">k</tspan></text>
+    <path
+       style="color:#000000;fill:none;stroke:#ff0000;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 490.5,552.5 267,0 0,33 -267,0 z"
+       id="path3984"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       sodipodi:nodetypes="cc"
+       id="path3986"
+       d="m 523,586.5 0,-33"
+       style="color:#000000;fill:none;stroke:#ff0000;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:none;stroke:#ff0000;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 557,586.5 0,-33"
+       id="path3988"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="cc"
+       id="path3990"
+       d="m 590,586.5 0,-33"
+       style="color:#000000;fill:none;stroke:#ff0000;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:none;stroke:#ff0000;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 624,586.5 0,-33"
+       id="path3992"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="cc"
+       id="path3994"
+       d="m 657,586.5 0,-33"
+       style="color:#000000;fill:none;stroke:#ff0000;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:none;stroke:#ff0000;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 690,586.5 0,-33"
+       id="path3996"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="cc"
+       id="path3998"
+       d="m 724,586.5 0,-33"
+       style="color:#000000;fill:none;stroke:#ff0000;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <text
+       sodipodi:linespacing="141%"
+       id="text4000"
+       y="576.76245"
+       x="506.0932"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       xml:space="preserve"><tspan
+         y="576.76245"
+         x="506.0932"
+         id="tspan4002"
+         sodipodi:role="line">d</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       x="540.0932"
+       y="576.76245"
+       id="text4004"
+       sodipodi:linespacing="141%"><tspan
+         sodipodi:role="line"
+         id="tspan4006"
+         x="540.0932"
+         y="576.76245">f</tspan></text>
+    <text
+       sodipodi:linespacing="141%"
+       id="text4008"
+       y="576.76245"
+       x="575.0932"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       xml:space="preserve"><tspan
+         y="576.76245"
+         x="575.0932"
+         id="tspan4010"
+         sodipodi:role="line">f</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       x="606.0932"
+       y="576.76245"
+       id="text4012"
+       sodipodi:linespacing="141%"><tspan
+         sodipodi:role="line"
+         id="tspan4014"
+         x="606.0932"
+         y="576.76245">f</tspan></text>
+    <text
+       sodipodi:linespacing="141%"
+       id="text4016"
+       y="576.76245"
+       x="639.0932"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       xml:space="preserve"><tspan
+         y="576.76245"
+         x="639.0932"
+         id="tspan4018"
+         sodipodi:role="line">f</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       x="672.0932"
+       y="576.76245"
+       id="text4020"
+       sodipodi:linespacing="141%"><tspan
+         sodipodi:role="line"
+         id="tspan4022"
+         x="672.0932"
+         y="576.76245">f</tspan></text>
+    <text
+       sodipodi:linespacing="141%"
+       id="text4024"
+       y="576.76245"
+       x="706.0932"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       xml:space="preserve"><tspan
+         y="576.76245"
+         x="706.0932"
+         id="tspan4026"
+         sodipodi:role="line">f</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       x="740.0932"
+       y="576.76245"
+       id="text4028"
+       sodipodi:linespacing="141%"><tspan
+         sodipodi:role="line"
+         id="tspan4030"
+         x="740.0932"
+         y="576.76245">f</tspan></text>
+    <path
+       sodipodi:nodetypes="ccccc"
+       id="path4080"
+       d="m 490.5,596.5 267,0 0,33 -267,0 z"
+       style="color:#000000;fill:none;stroke:#ff0000;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:none;stroke:#ff0000;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 523,630.5 0,-33"
+       id="path4082"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="cc"
+       id="path4084"
+       d="m 557,630.5 0,-33"
+       style="color:#000000;fill:none;stroke:#ff0000;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:none;stroke:#ff0000;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 590,630.5 0,-33"
+       id="path4086"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="cc"
+       id="path4088"
+       d="m 624,630.5 0,-33"
+       style="color:#000000;fill:none;stroke:#ff0000;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:none;stroke:#ff0000;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 657,630.5 0,-33"
+       id="path4090"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="cc"
+       id="path4092"
+       d="m 690,630.5 0,-33"
+       style="color:#000000;fill:none;stroke:#ff0000;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:none;stroke:#ff0000;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 724,630.5 0,-33"
+       id="path4094"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       x="506.0932"
+       y="620.76245"
+       id="text4096"
+       sodipodi:linespacing="141%"><tspan
+         sodipodi:role="line"
+         id="tspan4098"
+         x="506.0932"
+         y="620.76245">d</tspan></text>
+    <text
+       sodipodi:linespacing="141%"
+       id="text4100"
+       y="620.76245"
+       x="540.0932"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       xml:space="preserve"><tspan
+         y="620.76245"
+         x="540.0932"
+         id="tspan4102"
+         sodipodi:role="line">f</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       x="575.0932"
+       y="620.76245"
+       id="text4104"
+       sodipodi:linespacing="141%"><tspan
+         sodipodi:role="line"
+         id="tspan4106"
+         x="575.0932"
+         y="620.76245">f</tspan></text>
+    <text
+       sodipodi:linespacing="141%"
+       id="text4108"
+       y="620.76245"
+       x="606.0932"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       xml:space="preserve"><tspan
+         y="620.76245"
+         x="606.0932"
+         id="tspan4110"
+         sodipodi:role="line">f</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       x="639.0932"
+       y="620.76245"
+       id="text4112"
+       sodipodi:linespacing="141%"><tspan
+         sodipodi:role="line"
+         id="tspan4114"
+         x="639.0932"
+         y="620.76245">f</tspan></text>
+    <text
+       sodipodi:linespacing="141%"
+       id="text4116"
+       y="620.76245"
+       x="672.0932"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       xml:space="preserve"><tspan
+         y="620.76245"
+         x="672.0932"
+         id="tspan4118"
+         sodipodi:role="line">f</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       x="706.0932"
+       y="620.76245"
+       id="text4120"
+       sodipodi:linespacing="141%"><tspan
+         sodipodi:role="line"
+         id="tspan4122"
+         x="706.0932"
+         y="620.76245">f</tspan></text>
+    <text
+       sodipodi:linespacing="141%"
+       id="text4124"
+       y="620.76245"
+       x="740.0932"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       xml:space="preserve"><tspan
+         y="620.76245"
+         x="740.0932"
+         id="tspan4126"
+         sodipodi:role="line">f</tspan></text>
+  </g>
+  <g
+     style="opacity:1"
+     inkscape:label="VEKTOR"
+     id="g4128"
+     inkscape:groupmode="layer">
+    <path
+       sodipodi:nodetypes="ccccc"
+       id="path4130"
+       d="m 412.5,108.5 33,0 0,33 -33,0 z"
+       style="color:#000000;fill:#000000;stroke:none;stroke-width:1.99999988;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:#ffffff;stroke:none;stroke-width:1.99999988;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 378.5,108.5 33,0 0,33 -33,0 z"
+       id="path4132"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       sodipodi:nodetypes="ccccc"
+       id="path4134"
+       d="m 346.5,108.5 32,0 0,33 -32,0 z"
+       style="color:#000000;fill:#ffffff;stroke:none;stroke-width:1.99999988;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:#ffffff;stroke:none;stroke-width:1.99999988;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 245.5,196.5 33,0 0,33 -33,0 z"
+       id="path4136"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       sodipodi:nodetypes="ccccc"
+       id="path4138"
+       d="m 211.5,196.5 34,0 0,33 -34,0 z"
+       style="color:#000000;fill:#ffffff;stroke:none;stroke-width:1.99999988;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       sodipodi:nodetypes="ccccc"
+       id="path4140"
+       d="m 245.5,152.5 33,0 0,33 -33,0 z"
+       style="color:#000000;fill:#ffffff;stroke:none;stroke-width:1.99999988;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:#ffffff;stroke:none;stroke-width:1.99999988;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 211.5,152.5 34,0 0,33 -34,0 z"
+       id="path4142"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       sodipodi:nodetypes="ccccc"
+       id="path4144"
+       d="m 211.5,152.5 67,0 0,33 -67,0 z"
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 211.5,196.5 67,0 0,33 -67,0 z"
+       id="path4146"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       sodipodi:nodetypes="cc"
+       id="path4148"
+       d="m 245.5,229.5 0,-33"
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 245.5,186.5 0,-33"
+       id="path4150"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="color:#000000;fill:#000000;stroke:none;stroke-width:1.99999988;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 245.5,108.5 33,0 0,33 -33,0 z"
+       id="path4152"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       sodipodi:nodetypes="ccccc"
+       id="path4154"
+       d="m 211.5,108.5 34,0 0,33 -34,0 z"
+       style="color:#000000;fill:#000000;stroke:none;stroke-width:1.99999988;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 211.5,108.5 67,0 0,33 -67,0 z"
+       id="path4156"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       sodipodi:nodetypes="cc"
+       id="path4158"
+       d="m 245.5,142.5 0,-33"
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:#000000;stroke:none;stroke-width:1.99999988;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 312.5,108.5 34,0 0,33 -34,0 z"
+       id="path4160"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       sodipodi:nodetypes="ccccc"
+       id="path4162"
+       d="m 312.5,108.5 133,0 0,33 -133,0 z"
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 346.5,142.5 0,-33"
+       id="path4164"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="cc"
+       id="path4166"
+       d="m 379,142.5 0,-33"
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 412,142.5 0,-33"
+       id="path4168"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="color:#000000;fill:#000000;stroke:none;stroke-width:1.99999988;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 412.5,152.5 33,0 0,33 -33,0 z"
+       id="path4170"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       sodipodi:nodetypes="ccccc"
+       id="path4172"
+       d="m 378.5,152.5 33,0 0,33 -33,0 z"
+       style="color:#000000;fill:#000000;stroke:none;stroke-width:1.99999988;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:#000000;stroke:none;stroke-width:1.99999988;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 346.5,152.5 32,0 0,33 -32,0 z"
+       id="path4174"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       sodipodi:nodetypes="ccccc"
+       id="path4176"
+       d="m 312.5,152.5 34,0 0,33 -34,0 z"
+       style="color:#000000;fill:#ffffff;stroke:none;stroke-width:1.99999988;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 312.5,152.5 133,0 0,33 -133,0 z"
+       id="path4178"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       sodipodi:nodetypes="cc"
+       id="path4180"
+       d="m 346.5,186.5 0,-33"
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 379,186.5 0,-33"
+       id="path4182"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="cc"
+       id="path4184"
+       d="m 412,186.5 0,-33"
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       sodipodi:nodetypes="ccccc"
+       id="path4186"
+       d="m 412.5,196.5 33,0 0,33 -33,0 z"
+       style="color:#000000;fill:#000000;stroke:none;stroke-width:1.99999988;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:#ffffff;stroke:none;stroke-width:1.99999988;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 378.5,196.5 33,0 0,33 -33,0 z"
+       id="path4188"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       sodipodi:nodetypes="ccccc"
+       id="path4190"
+       d="m 346.5,196.5 32,0 0,33 -32,0 z"
+       style="color:#000000;fill:#000000;stroke:none;stroke-width:1.99999988;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:#ffffff;stroke:none;stroke-width:1.99999988;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 312.5,196.5 34,0 0,33 -34,0 z"
+       id="path4192"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       sodipodi:nodetypes="ccccc"
+       id="path4194"
+       d="m 312.5,196.5 133,0 0,33 -133,0 z"
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 346.5,230.5 0,-33"
+       id="path4196"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="cc"
+       id="path4198"
+       d="m 379,230.5 0,-33"
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 412,230.5 0,-33"
+       id="path4200"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="color:#000000;fill:#cccccc;stroke:#ffffff;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 480.5,108.5 267,0 0,33 -267,0 z"
+       id="path4202"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       sodipodi:nodetypes="cc"
+       id="path4204"
+       d="m 513,142.5 0,-33"
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 547,142.5 0,-33"
+       id="path4206"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="cc"
+       id="path4208"
+       d="m 580,142.5 0,-33"
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 614,142.5 0,-33"
+       id="path4210"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="cc"
+       id="path4212"
+       d="m 647,142.5 0,-33"
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 680,142.5 0,-33"
+       id="path4214"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="cc"
+       id="path4216"
+       d="m 714,142.5 0,-33"
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       sodipodi:nodetypes="cccc"
+       id="path4218"
+       d="m 747.5,243.5 0,15 -267,0 0,-15"
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 445.5,243.5 0,15 -233,0 0,-15"
+       id="path4220"
+       sodipodi:nodetypes="cccc" />
+    <text
+       sodipodi:linespacing="141%"
+       id="text4222"
+       y="74.762482"
+       x="13.653221"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       xml:space="preserve"><tspan
+         y="74.762482"
+         x="13.653221"
+         id="tspan4224"
+         sodipodi:role="line">assembly</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       x="208.65323"
+       y="74.762482"
+       id="text4226"
+       sodipodi:linespacing="141%"><tspan
+         sodipodi:role="line"
+         id="tspan4228"
+         x="208.65323"
+         y="74.762482">binary</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       x="13.653221"
+       y="131.76245"
+       id="text4230"
+       sodipodi:linespacing="141%"><tspan
+         sodipodi:role="line"
+         id="tspan4232"
+         x="13.653221"
+         y="131.76245">ANDLW</tspan></text>
+    <text
+       sodipodi:linespacing="141%"
+       id="text4234"
+       y="175.76245"
+       x="13.653221"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       xml:space="preserve"><tspan
+         y="175.76245"
+         x="13.653221"
+         id="tspan4236"
+         sodipodi:role="line">ADDWF</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       x="13.653221"
+       y="220.76245"
+       id="text4238"
+       sodipodi:linespacing="141%"><tspan
+         sodipodi:role="line"
+         id="tspan4240"
+         x="13.653221"
+         y="220.76245">ANDWF</tspan></text>
+    <text
+       sodipodi:linespacing="141%"
+       id="text4242"
+       y="131.76245"
+       x="100.65322"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       xml:space="preserve"><tspan
+         y="131.76245"
+         x="100.65322"
+         id="tspan4244"
+         sodipodi:role="line">k</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       x="100.65322"
+       y="175.76245"
+       id="text4246"
+       sodipodi:linespacing="141%"><tspan
+         sodipodi:role="line"
+         id="tspan4248"
+         x="100.65322"
+         y="175.76245">f, d</tspan></text>
+    <text
+       sodipodi:linespacing="141%"
+       id="text4250"
+       y="220.76245"
+       x="100.65322"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       xml:space="preserve"><tspan
+         y="220.76245"
+         x="100.65322"
+         id="tspan4252"
+         sodipodi:role="line">f, d</tspan></text>
+    <text
+       sodipodi:linespacing="141%"
+       id="text4254"
+       y="285.76245"
+       x="278.65323"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       xml:space="preserve"><tspan
+         y="285.76245"
+         x="278.65323"
+         id="tspan4256"
+         sodipodi:role="line">opcode</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       x="570.6532"
+       y="285.76245"
+       id="text4258"
+       sodipodi:linespacing="141%"><tspan
+         sodipodi:role="line"
+         id="tspan4260"
+         x="570.6532"
+         y="285.76245">operands</tspan></text>
+    <text
+       sodipodi:linespacing="141%"
+       id="text4262"
+       y="132.76245"
+       x="496.0932"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       xml:space="preserve"><tspan
+         y="132.76245"
+         x="496.0932"
+         id="tspan4264"
+         sodipodi:role="line">k</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       x="530.0932"
+       y="132.76245"
+       id="text4266"
+       sodipodi:linespacing="141%"><tspan
+         sodipodi:role="line"
+         id="tspan4268"
+         x="530.0932"
+         y="132.76245">k</tspan></text>
+    <text
+       sodipodi:linespacing="141%"
+       id="text4270"
+       y="132.76245"
+       x="565.0932"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       xml:space="preserve"><tspan
+         y="132.76245"
+         x="565.0932"
+         id="tspan4272"
+         sodipodi:role="line">k</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       x="599.0932"
+       y="132.76245"
+       id="text4274"
+       sodipodi:linespacing="141%"><tspan
+         sodipodi:role="line"
+         id="tspan4276"
+         x="599.0932"
+         y="132.76245">k</tspan></text>
+    <text
+       sodipodi:linespacing="141%"
+       id="text4278"
+       y="132.76245"
+       x="633.0932"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       xml:space="preserve"><tspan
+         y="132.76245"
+         x="633.0932"
+         id="tspan4280"
+         sodipodi:role="line">k</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       x="663.0932"
+       y="132.76245"
+       id="text4282"
+       sodipodi:linespacing="141%"><tspan
+         sodipodi:role="line"
+         id="tspan4284"
+         x="663.0932"
+         y="132.76245">k</tspan></text>
+    <text
+       sodipodi:linespacing="141%"
+       id="text4286"
+       y="132.76245"
+       x="697.0932"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       xml:space="preserve"><tspan
+         y="132.76245"
+         x="697.0932"
+         id="tspan4288"
+         sodipodi:role="line">k</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       x="731.0932"
+       y="132.76245"
+       id="text4290"
+       sodipodi:linespacing="141%"><tspan
+         sodipodi:role="line"
+         id="tspan4292"
+         x="731.0932"
+         y="132.76245">k</tspan></text>
+    <path
+       sodipodi:nodetypes="ccccc"
+       id="path4294"
+       d="m 480.5,152.5 267,0 0,33 -267,0 z"
+       style="color:#000000;fill:#cccccc;stroke:#ffffff;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 513,186.5 0,-33"
+       id="path4296"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="cc"
+       id="path4298"
+       d="m 547,186.5 0,-33"
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 580,186.5 0,-33"
+       id="path4300"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="cc"
+       id="path4302"
+       d="m 614,186.5 0,-33"
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 647,186.5 0,-33"
+       id="path4304"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="cc"
+       id="path4306"
+       d="m 680,186.5 0,-33"
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 714,186.5 0,-33"
+       id="path4308"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       x="496.0932"
+       y="176.76245"
+       id="text4310"
+       sodipodi:linespacing="141%"><tspan
+         sodipodi:role="line"
+         id="tspan4312"
+         x="496.0932"
+         y="176.76245">d</tspan></text>
+    <text
+       sodipodi:linespacing="141%"
+       id="text4314"
+       y="176.76245"
+       x="530.0932"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       xml:space="preserve"><tspan
+         y="176.76245"
+         x="530.0932"
+         id="tspan4316"
+         sodipodi:role="line">f</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       x="565.0932"
+       y="176.76245"
+       id="text4318"
+       sodipodi:linespacing="141%"><tspan
+         sodipodi:role="line"
+         id="tspan4320"
+         x="565.0932"
+         y="176.76245">f</tspan></text>
+    <text
+       sodipodi:linespacing="141%"
+       id="text4322"
+       y="176.76245"
+       x="596.0932"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       xml:space="preserve"><tspan
+         y="176.76245"
+         x="596.0932"
+         id="tspan4324"
+         sodipodi:role="line">f</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       x="629.0932"
+       y="176.76245"
+       id="text4326"
+       sodipodi:linespacing="141%"><tspan
+         sodipodi:role="line"
+         id="tspan4328"
+         x="629.0932"
+         y="176.76245">f</tspan></text>
+    <text
+       sodipodi:linespacing="141%"
+       id="text4330"
+       y="176.76245"
+       x="662.0932"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       xml:space="preserve"><tspan
+         y="176.76245"
+         x="662.0932"
+         id="tspan4332"
+         sodipodi:role="line">f</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       x="696.0932"
+       y="176.76245"
+       id="text4334"
+       sodipodi:linespacing="141%"><tspan
+         sodipodi:role="line"
+         id="tspan4336"
+         x="696.0932"
+         y="176.76245">f</tspan></text>
+    <text
+       sodipodi:linespacing="141%"
+       id="text4338"
+       y="176.76245"
+       x="730.0932"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       xml:space="preserve"><tspan
+         y="176.76245"
+         x="730.0932"
+         id="tspan4340"
+         sodipodi:role="line">f</tspan></text>
+    <path
+       style="color:#000000;fill:#cccccc;stroke:#ffffff;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 480.5,196.5 267,0 0,33 -267,0 z"
+       id="path4342"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       sodipodi:nodetypes="cc"
+       id="path4344"
+       d="m 513,230.5 0,-33"
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 547,230.5 0,-33"
+       id="path4346"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="cc"
+       id="path4348"
+       d="m 580,230.5 0,-33"
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 614,230.5 0,-33"
+       id="path4350"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="cc"
+       id="path4352"
+       d="m 647,230.5 0,-33"
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 680,230.5 0,-33"
+       id="path4354"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="cc"
+       id="path4356"
+       d="m 714,230.5 0,-33"
+       style="color:#000000;fill:none;stroke:#ffffff;stroke-width:1.99999988;stroke-miterlimit:4;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <text
+       sodipodi:linespacing="141%"
+       id="text4358"
+       y="220.76245"
+       x="496.0932"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       xml:space="preserve"><tspan
+         y="220.76245"
+         x="496.0932"
+         id="tspan4360"
+         sodipodi:role="line">d</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       x="530.0932"
+       y="220.76245"
+       id="text4362"
+       sodipodi:linespacing="141%"><tspan
+         sodipodi:role="line"
+         id="tspan4364"
+         x="530.0932"
+         y="220.76245">f</tspan></text>
+    <text
+       sodipodi:linespacing="141%"
+       id="text4366"
+       y="220.76245"
+       x="565.0932"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       xml:space="preserve"><tspan
+         y="220.76245"
+         x="565.0932"
+         id="tspan4368"
+         sodipodi:role="line">f</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       x="596.0932"
+       y="220.76245"
+       id="text4370"
+       sodipodi:linespacing="141%"><tspan
+         sodipodi:role="line"
+         id="tspan4372"
+         x="596.0932"
+         y="220.76245">f</tspan></text>
+    <text
+       sodipodi:linespacing="141%"
+       id="text4374"
+       y="220.76245"
+       x="629.0932"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       xml:space="preserve"><tspan
+         y="220.76245"
+         x="629.0932"
+         id="tspan4376"
+         sodipodi:role="line">f</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       x="662.0932"
+       y="220.76245"
+       id="text4378"
+       sodipodi:linespacing="141%"><tspan
+         sodipodi:role="line"
+         id="tspan4380"
+         x="662.0932"
+         y="220.76245">f</tspan></text>
+    <text
+       sodipodi:linespacing="141%"
+       id="text4382"
+       y="220.76245"
+       x="696.0932"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       xml:space="preserve"><tspan
+         y="220.76245"
+         x="696.0932"
+         id="tspan4384"
+         sodipodi:role="line">f</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:140.99999666%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:TeX Gyre Heros;-inkscape-font-specification:TeX Gyre Heros"
+       x="730.0932"
+       y="220.76245"
+       id="text4386"
+       sodipodi:linespacing="141%"><tspan
+         sodipodi:role="line"
+         id="tspan4388"
+         x="730.0932"
+         y="220.76245">f</tspan></text>
+  </g>
+</svg>

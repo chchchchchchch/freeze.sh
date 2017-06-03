@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- CLEANED: 1496071333/185baa0f9091c83f3ef657b4c9c4020f -->
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   width="420"
+   height="300"
+   sodipodi:docname="ap0201_4.svg">
+  <metadata
+     id="metadata8">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs6" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     id="namedview4"
+     showgrid="false">
+    <sodipodi:guide
+       position="0,300"
+       orientation="0,420"
+       id="guide3060" />
+    <sodipodi:guide
+       position="420,300"
+       orientation="300,0"
+       id="guide3062" />
+    <sodipodi:guide
+       position="420,0"
+       orientation="0,-420"
+       id="guide3064" />
+    <sodipodi:guide
+       position="0,0"
+       orientation="-300,0"
+       id="guide3066" />
+  </sodipodi:namedview>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="IMG">
+    <image
+       width="561.44153"
+       height="344.3508"
+       xlink:href="../src/xcrop00017.jpg"
+       checksum="bc1c587a3e60d1a1"
+       id="image10"
+       x="-70.720764"
+       y="-28.175402" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer1"
+     inkscape:label="COVER"
+     sodipodi:insensitive="true">
+    <path
+       style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m -1790,-1275 0,2850 4000,0 0,-2850 -4000,0 z M 0,0 420,0 420,300 0,300 0,0 z"
+       id="path3039" />
+  </g>
+</svg>

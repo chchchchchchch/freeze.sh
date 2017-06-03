@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- CLEANED: 1496071344/05da8f0bac709174bd3cbb6b17dc576e -->
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   width="800"
+   height="800"
+   sodipodi:docname="unitedhabitation-berlin_02.svg">
+  <metadata
+     id="metadata8">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs6" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     id="namedview4"
+     showgrid="false"
+     inkscape:snap-global="false">
+    <sodipodi:guide
+       position="0,800"
+       orientation="0,800"
+       id="guide3030" />
+    <sodipodi:guide
+       position="800,800"
+       orientation="800,0"
+       id="guide3032" />
+    <sodipodi:guide
+       position="800,0"
+       orientation="0,-800"
+       id="guide3034" />
+    <sodipodi:guide
+       position="0,0"
+       orientation="-800,0"
+       id="guide3036" />
+  </sodipodi:namedview>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="IMG">
+    <image
+       width="959.11615"
+       height="968.83221"
+       xlink:href="../src/UH-B_18.jpg"
+       checksum="7b4738586cb62f0b"
+       id="image10"
+       x="-12.410705"
+       y="-108.79256"
+       transform="matrix(0.99992511,-0.01223842,0.01223842,0.99992511,0,0)" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer1"
+     inkscape:label="COVER"
+     sodipodi:insensitive="true">
+    <path
+       style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m -1600,-1600 0,4000 4000,0 0,-4000 -4000,0 z M 0,0 800,0 800,800 0,800 0,0 z"
+       id="path3009" />
+  </g>
+</svg>

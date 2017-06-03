@@ -1,0 +1,101 @@
+# S H A R E D =============================================================== #
+
+ function separateSection() {
+
+       SEP="% -----"                     # THIS IS THE SEPARATOR
+      SEPN=`grep -n "" $SRCDUMP                 | # NUMBER LINES
+            egrep "$SEP|^[0-9]*:[ ]*$EMPTYLINE" | # LOCATE SEPARATOR OR EMPTY LINE
+            tail -n 1                           | # SELECT LAST 
+            cut -d ":" -f 1`                      # SELECT FIRST FIELD
+       sed "1,${SEPN}d" $SRCDUMP     | # PRINT FROM LINE NUM TO END
+       sed -e :a -e "\$!N;s/[ ]*\n$COMSTART/$COMSTART/;ta" -e 'P;D' | #
+       sed "s/^$COMSTART[ ]*%[ ]//"  | # REMOVE COMMENT START
+       sed "s/${COMCLOSE}$//"        | # REMOVE COMMENT CLOSE
+       tac | sed -n '2,$p' | tac     | # RM LAST (=TAC RM FIRST) LINE
+       tee > $SEPARATED
+ }
+
+# =========================================================================== #
+
+
+
+# --------------------------------------------------------------------------- #
+
+function NTHIFY() {
+
+  sed -i 's/\b\([0-9]\+\)\([nthsrd]\{2\}\)\b/\1<sup class="nth">\2<\/sup>/g' $SRCDUMP
+
+}
+
+# --------------------------------------------------------------------------- #
+
+function REF() {
+
+  REFID=`echo $*             | # WHAT? 
+         sed 's/^[ \t]*//'   | # REMOVE LEADING WHITESPACE
+         sed 's/[ \t]*$//'   | # REMOVE TRAILING WHITESPACE
+         md5sum | cut -c 1-10` # CREATE UNIQUE ID
+
+  write2src "<span id=\"$REFID\" class=\"anchor\"></span>"
+
+}
+
+# --------------------------------------------------------------------------- #
+
+function REFREF() {
+
+  REFID=`echo $*             | # WHAT? 
+         sed 's/^[ \t]*//'   | # REMOVE LEADING WHITESPACE
+         sed 's/[ \t]*$//'   | # REMOVE TRAILING WHITESPACE
+         md5sum | cut -c 1-10` # CREATE UNIQUE ID
+
+  write2src "<a href=\"#$REFID\" class=\"refref\">→</a> "
+}
+
+# --------------------------------------------------------------------------- #
+
+function TITLE() {
+
+  write2src "<h1 class="title">$*</h1>"
+
+}
+
+# --------------------------------------------------------------------------- #
+
+function SHOWPLUSINFO() {
+
+  CSSCLASS=`echo $* | sed 's/^[ \t]*//'`
+
+  SEPARATED=${TMPID}.xtract
+  separateSection
+
+   write2src "<figure class=\"$CSSCLASS\">"
+
+   for IMGFILE in `grep "^I:" $SEPARATED | #
+                   cut -d ":" -f 2-`
+    do 
+         AHREF=`echo $IMGFILE | cut -d ":" -f 2-`
+       IMGFILE=`echo $IMGFILE | cut -d ":" -f 1`
+       if [ -f $INCLUDEPATH/$IMGFILE ]; then
+            IMGTAG="<img src=\"$IMGFILE\" />"
+       if [ `echo $AHREF   | #
+             grep "^http.\?:" | #
+             wc -l` -gt 0 ];then
+             IMGTAG=`echo "$IMGTAG" | #
+                     sed "s|^|<a href=\"$AHREF\" target=\"_blank\">|" | #
+                     sed "s|$|<\/a>|"`
+       fi
+       else echo "$IMGFILE IS MISSING"
+            IMGTAG=""
+       fi
+       write2src "$IMGTAG"
+   done
+
+   write2src "<figcaption>"
+   grep -v "^I:" $SEPARATED >> $SRCDUMP
+   write2src "</figcaption>"
+   write2src "</figure>"
+}
+
+# --------------------------------------------------------------------------- #
+

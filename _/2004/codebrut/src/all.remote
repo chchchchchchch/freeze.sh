@@ -1,0 +1,325 @@
+# ORIGINAL SOURCE TEXT
+  http://www.lipparosa.org/essays/code_brut.pdf
+
+# pdftotext (RAW)
+# https://freeze.sh/raw/f655b31a1c3a0e5d -> code_brut.txt
+
+# https://freeze.sh/raw/33c21335174ca8e1 -> PIC16F84.pdf
+  http://web.mit.edu/rec/datasheets/PIC16F84.pdf
+
+# http://www.cm.ph.bham.ac.uk/software/yappa/sample.html
+  http://www.cm.ph.bham.ac.uk/software/yappa/slowcnt.ps
+  http://www.cm.ph.bham.ac.uk/software/yappa/slowcnt.jpg
+
+# U N I T E   D ' H A B I T A T I O N
+# -----------------------------------
+
+# https://commons.wikimedia.org/wiki/File:M%C3%B3dulo_de_vivienda_tipo_de_Unit%C3%A9_d%C2%B4Habitation.jpg
+# CC-BY-SA
+  https://upload.wikimedia.org/wikipedia/commons/7/71/M%C3%B3dulo_de_vivienda_tipo_de_Unit%C3%A9_d%C2%B4Habitation.jpg -> UH_Modulo.jpg
+
+# https://commons.wikimedia.org/wiki/File:Marseille_Le_Corbusier.jpg
+# CC-SA
+  https://upload.wikimedia.org/wikipedia/commons/7/71/Marseille_Le_Corbusier.jpg -> UH-M_01.jpg
+
+# https://commons.wikimedia.org/wiki/File:Cit%C3%A9_Radieuse.jpg
+# CC-BY-SA
+  https://upload.wikimedia.org/wikipedia/commons/6/6d/Cit%C3%A9_Radieuse.jpg -> UH-M_02.jpg
+
+# https://commons.wikimedia.org/wiki/File:Unit%C3%A8_d%27habitation_Marseille.jpg
+# CC-BY-SA
+  https://upload.wikimedia.org/wikipedia/commons/4/45/Unit%C3%A8_d%27habitation_Marseille.jpg -> UH-M_03.jpg
+
+# https://commons.wikimedia.org/wiki/File:Unite_d%27Habitation,_Marseille.jpg
+# CC-BY-SA
+  https://upload.wikimedia.org/wikipedia/commons/6/60/Unite_d%27Habitation%2C_Marseille.jpg -> UH-M_04.jpg
+
+# https://commons.wikimedia.org/wiki/File:Unit%C3%A9_d%27Habitation_de_Marseille_1.JPG
+# CC-BY-SA
+  https://upload.wikimedia.org/wikipedia/commons/c/cf/Unit%C3%A9_d%27Habitation_de_Marseille_1.JPG -> UH-M_05.jpg
+
+# https://commons.wikimedia.org/wiki/File:Unit%C3%A9_d%27Habitation_de_Marseille_2.JPG
+# CC-BY-SA
+  https://upload.wikimedia.org/wikipedia/commons/0/07/Unit%C3%A9_d%27Habitation_de_Marseille_2.JPG -> UH-M_06.jpg
+
+# https://commons.wikimedia.org/wiki/File:Rez%C3%A9_centre.jpg
+# CC-BY-SA / GFDL
+  https://upload.wikimedia.org/wikipedia/commons/8/85/Rez%C3%A9_centre.jpg -> UH-R_01.jpg
+
+# https://commons.wikimedia.org/wiki/File:Parc_des_Oblates_14.JPG
+# CC-BY-SA
+  https://upload.wikimedia.org/wikipedia/commons/0/0d/Parc_des_Oblates_14.JPG -> UH-R_02.jpg
+
+# https://commons.wikimedia.org/wiki/File:200806_Berlin_425.JPG
+# CC-BY-SA
+  https://upload.wikimedia.org/wikipedia/commons/b/bc/200806_Berlin_425.JPG -> UH-B_01.jpg
+
+# https://commons.wikimedia.org/wiki/File:200806_Berlin_426.JPG
+# CC-BY-SA
+  https://upload.wikimedia.org/wikipedia/commons/b/bd/200806_Berlin_426.JPG -> UH-B_01.jpg
+
+# https://commons.wikimedia.org/wiki/File:200806_Berlin_428.JPG
+# CC-BY-SA
+  https://upload.wikimedia.org/wikipedia/commons/d/d7/200806_Berlin_428.JPG -> UH-B_02.jpg
+
+# https://commons.wikimedia.org/wiki/File:200806_Berlin_429.JPG
+# CC-BY-SA
+  https://upload.wikimedia.org/wikipedia/commons/d/da/200806_Berlin_429.JPG -> UH-B_03.jpg
+
+# https://commons.wikimedia.org/wiki/File:Corbusier_Unite_Berlin.jpg
+# CC-BY-SA / GFDL
+  https://upload.wikimedia.org/wikipedia/commons/3/35/Corbusier_Unite_Berlin.jpg -> UH-B_04.jpg
+
+# https://commons.wikimedia.org/wiki/File:Corbusierhaus_(Berlin)_(6305809373).jpg
+# CC-BY
+  https://upload.wikimedia.org/wikipedia/commons/d/df/Corbusierhaus_%28Berlin%29_%286305809373%29.jpg -> UH-B_05.jpg
+
+# https://commons.wikimedia.org/wiki/File:Corbusierhaus_(Berlin)_(6306308426).jpg
+# CC-BY
+  https://upload.wikimedia.org/wikipedia/commons/8/8a/Corbusierhaus_%28Berlin%29_%286306308426%29.jpg -> UH-B_06.jpg
+
+# https://commons.wikimedia.org/wiki/File:Corbusierhaus_Berlin_1.jpg
+# CC-BY-SA
+  https://upload.wikimedia.org/wikipedia/commons/3/30/Corbusierhaus_Berlin_1.jpg -> UH-B_07.jpg
+
+# https://commons.wikimedia.org/wiki/File:Corbusierhaus_Berlin_2.jpg
+# CC-BY-SA / GFDL
+  https://upload.wikimedia.org/wikipedia/commons/f/fe/Corbusierhaus_Berlin_2.jpg -> UH-B_08.jpg
+
+# https://commons.wikimedia.org/wiki/File:Corbusierhaus_Berlin_3.jpg
+# CC-BY-SA / GFDL
+  https://upload.wikimedia.org/wikipedia/commons/c/cf/Corbusierhaus_Berlin_3.jpg -> UH-B_09.jpg
+
+# https://commons.wikimedia.org/wiki/File:Corbusierhaus_Berlin_B.jpg
+# CC-BY-SA
+  https://upload.wikimedia.org/wikipedia/commons/a/af/Corbusierhaus_Berlin_B.jpg -> UH-B_10.jpg
+
+# https://commons.wikimedia.org/wiki/File:Corbusierhaus_Berlin_C.jpg
+# CC-BY-SA
+  https://upload.wikimedia.org/wikipedia/commons/f/f5/Corbusierhaus_Berlin_C.jpg -> UH-B_11.jpg
+
+# https://commons.wikimedia.org/wiki/File:Corbusierhaus_Berlin.jpg
+# CC-BY-SAi / GFDL
+  https://upload.wikimedia.org/wikipedia/commons/d/d6/Corbusierhaus_Berlin.jpg -> UH-B_12.jpg
+
+# https://commons.wikimedia.org/wiki/File:Corbusierhaus-Suedansicht_Bln-Img01.jpg
+# CC-BY-SA
+  https://upload.wikimedia.org/wikipedia/commons/2/24/Corbusierhaus-Suedansicht_Bln-Img01.jpg -> UH-B_13.jpg
+
+# https://commons.wikimedia.org/wiki/File:Le_Corbusier_haus,_Berlin.JPG
+# CC-BY-SA
+  https://upload.wikimedia.org/wikipedia/commons/d/dc/Le_Corbusier_haus%2C_Berlin.JPG -> UH-B_14.jpg
+
+# https://commons.wikimedia.org/wiki/File:Le_Corbusier_Haus,_Berlin.JPG
+# CC-BY-SA
+  https://upload.wikimedia.org/wikipedia/commons/3/3a/Le_Corbusier_Haus%2C_Berlin.JPG -> UH-B_15.jpg
+
+# https://commons.wikimedia.org/wiki/File:Le_Corbusierhaus_%22die_Wohnmaschine%22.jpg
+# CC-BY-SA
+  https://upload.wikimedia.org/wikipedia/commons/8/8f/Le_Corbusierhaus_%22die_Wohnmaschine%22.jpg -> UH-B_16.jpg
+
+# https://commons.wikimedia.org/wiki/File:Seitenansicht_Le_Corbusierhaus_%22die_Wohnmaschine%22.jpg
+# CC-BY-SA
+  https://upload.wikimedia.org/wikipedia/commons/5/56/Seitenansicht_Le_Corbusierhaus_%22die_Wohnmaschine%22.jpg -> UH-B_17.jpg
+
+# https://commons.wikimedia.org/wiki/File:Unite-d-Habitation-type-Berlin-Flatowallee-Berlin-Westend-10-2014.jpg
+# CC-BY-SA
+  https://upload.wikimedia.org/wikipedia/commons/5/53/Unite-d-Habitation-type-Berlin-Flatowallee-Berlin-Westend-10-2014.jpg -> UH-B_18.jpg
+
+# https://commons.wikimedia.org/wiki/File:Unit%C3%A9_d%27Habitation_Typ_Berlin_%26_Corbusier-Haus,_S%C3%BCdfassade.jpg
+# CC-BY-SA
+  https://upload.wikimedia.org/wikipedia/commons/c/c2/Unit%C3%A9_d%27Habitation_Typ_Berlin_%26_Corbusier-Haus%2C_S%C3%BCdfassade.jpg -> UH-B_19.jpg
+
+# https://commons.wikimedia.org/wiki/File:Unit%C3%A9_d%27Habitation_Typ_Berlin_%26_Corbusier-Haus,_Westfassade,_Detail.jpg
+# CC-BY-SA
+  https://upload.wikimedia.org/wikipedia/commons/2/2c/Unit%C3%A9_d%27Habitation_Typ_Berlin_%26_Corbusier-Haus%2C_Westfassade%2C_Detail.jpg -> UH-B_20.jpg
+
+# https://commons.wikimedia.org/wiki/File:WestendCorbusierhaus1.JPG
+# CC-BY-SA
+  https://upload.wikimedia.org/wikipedia/commons/4/46/WestendCorbusierhaus1.JPG -> UH-B_21.jpg
+
+# https://commons.wikimedia.org/wiki/File:WestendCorbusierhaus2.JPG
+# CC-BY-SA
+  https://upload.wikimedia.org/wikipedia/commons/b/bf/WestendCorbusierhaus2.JPG -> UH-B_22.jpg
+
+# https://commons.wikimedia.org/wiki/File:WestendCorbusierhaus3.JPG
+# CC-BY-SA
+  https://upload.wikimedia.org/wikipedia/commons/4/47/WestendCorbusierhaus3.JPG -> UH-B_23.jpg
+
+
+# https://commons.wikimedia.org/wiki/File:Trellick_Tower2.jpg
+# CC-BY-SA
+  https://upload.wikimedia.org/wikipedia/commons/1/1d/Trellick_Tower2.jpg
+
+# https://commons.wikimedia.org/wiki/File:Habitat_panorama.jpg
+# CC-BY-SA / GFDL
+  https://upload.wikimedia.org/wikipedia/commons/e/e3/Habitat_panorama.jpg
+
+# https://commons.wikimedia.org/wiki/File:Jugotours_Beograd_Dec_2003.jpg
+# CC-BY-SA
+  https://upload.wikimedia.org/wikipedia/commons/a/aa/Jugotours_Beograd_Dec_2003.jpg
+
+
+# Q U E E N   E L I Z A B E T H   S Q U A R E   D E M O L I T I O N
+# -----------------------------------------------------------------
+
+# https://commons.wikimedia.org/wiki/File:Queen_Elizabeth_Flats_-_before_demolition_1.jpg
+# CC-BY-SA
+  https://upload.wikimedia.org/wikipedia/commons/a/a3/Queen_Elizabeth_Flats_-_before_demolition_1.jpg
+
+# https://commons.wikimedia.org/wiki/File:Queen_Elizabeth_Flats_-_before_demolition_2_(sharper_despeckle).jpg
+# CC-BY-SA
+# https://upload.wikimedia.org/wikipedia/commons/b/bd/Queen_Elizabeth_Flats_-_before_demolition_2_%28sharper_despeckle%29.jpg
+
+# https://commons.wikimedia.org/wiki/File:Queen_Elizabeth_Flats_-_before_demolition_2.jpg
+# CC-BY-SA
+  https://upload.wikimedia.org/wikipedia/commons/4/46/Queen_Elizabeth_Flats_-_before_demolition_2.jpg
+
+# https://commons.wikimedia.org/wiki/File:Queen_Elizabeth_Flats_1.jpg
+# CC-BY
+  https://upload.wikimedia.org/wikipedia/commons/b/b8/Queen_Elizabeth_Flats_1.jpg
+
+# https://commons.wikimedia.org/wiki/File:Queen_Elizabeth_Flats_2_-_Crowds.jpg
+# CC-BY
+  https://upload.wikimedia.org/wikipedia/commons/1/12/Queen_Elizabeth_Flats_2_-_Crowds.jpg
+
+# https://commons.wikimedia.org/wiki/File:Queen_Elizabeth_Flats_3_-_Crowds.jpg
+# CC-BY
+  https://upload.wikimedia.org/wikipedia/commons/d/dc/Queen_Elizabeth_Flats_3_-_Crowds.jpg
+
+# https://commons.wikimedia.org/wiki/File:Queen_Elizabeth_Flats_4_-_Waiting.jpg
+# CC-BY
+  https://upload.wikimedia.org/wikipedia/commons/3/38/Queen_Elizabeth_Flats_4_-_Waiting.jpg
+
+# https://commons.wikimedia.org/wiki/File:Queen_Elizabeth_Flats_5_-_Demolition.jpg
+# CC-BY
+  https://upload.wikimedia.org/wikipedia/commons/1/1a/Queen_Elizabeth_Flats_5_-_Demolition.jpg
+
+# https://commons.wikimedia.org/wiki/File:Queen_Elizabeth_Flats_6_-_Demolition.jpg
+# CC-BY
+  https://upload.wikimedia.org/wikipedia/commons/d/df/Queen_Elizabeth_Flats_6_-_Demolition.jpg
+
+# https://commons.wikimedia.org/wiki/File:Queen_Elizabeth_Flats_7_-_Demolition.jpg
+# CC-BY
+  https://upload.wikimedia.org/wikipedia/commons/0/0e/Queen_Elizabeth_Flats_7_-_Demolition.jpg
+
+# https://commons.wikimedia.org/wiki/File:Queen_Elizabeth_Flats_8_-_Demolition.jpg
+# CC-BY
+  https://upload.wikimedia.org/wikipedia/commons/e/ed/Queen_Elizabeth_Flats_8_-_Demolition.jpg
+
+
+# P A R K  H I L L
+# ----------------
+
+# https://commons.wikimedia.org/wiki/File:C%C3%A9lula_b%C3%A1sica_de_vivienda.jpg
+# CC-BY-SA
+  https://upload.wikimedia.org/wikipedia/commons/2/28/C%C3%A9lula_b%C3%A1sica_de_vivienda.jpg -> PH_01.jpg
+
+# https://commons.wikimedia.org/wiki/File:Geograph-3412683-by-Dave-Pickersgill_(2).jpg
+# CC-BY-SA
+  https://upload.wikimedia.org/wikipedia/commons/0/07/Geograph-3412683-by-Dave-Pickersgill_%282%29.jpg -> PH_02.jpg
+
+# https://commons.wikimedia.org/wiki/File:Park_Hill_3.jpg
+# CC-BY-SA
+  https://upload.wikimedia.org/wikipedia/commons/6/6f/Park_Hill_3.jpg -> PH_03.jpg
+
+# https://commons.wikimedia.org/wiki/File:Park_Hill_close-up.JPG
+# CC-BY-SA / GFDL
+  https://upload.wikimedia.org/wikipedia/commons/8/8c/Park_Hill_close-up.JPG -> PH_04.jpg
+
+# https://commons.wikimedia.org/wiki/File:Park_Hill_facade.jpg
+# CC-BY-SA
+  https://upload.wikimedia.org/wikipedia/commons/1/18/Park_Hill_facade.jpg -> PH_05.jpg
+
+# https://commons.wikimedia.org/wiki/File:Park_Hill_Flats_in_March_2008_-_Geograph-3663164-by-Martin-Speck.jpg
+# CC-BY-SA
+  https://upload.wikimedia.org/wikipedia/commons/5/58/Park_Hill_Flats_in_March_2008_-_Geograph-3663164-by-Martin-Speck.jpg -> -> PH_06.jpg
+
+# https://commons.wikimedia.org/wiki/File:Park_Hill_Flats_Urban_Splas.JPG
+# PUBLIC DOMAIN
+  https://upload.wikimedia.org/wikipedia/commons/7/7f/Park_Hill_Flats_Urban_Splas.JPG -> PH_07.jpg
+
+# https://commons.wikimedia.org/wiki/File:Park_Hill_housing_estate,_Sheffield.jpg
+# CC-BY-SA / GFDL
+  https://upload.wikimedia.org/wikipedia/commons/b/b3/Park_Hill_housing_estate%2C_Sheffield.jpg -> PH_08.jpg
+
+# https://commons.wikimedia.org/wiki/File:Park_Hill_path.jpg
+# CC-BY-SA
+  https://upload.wikimedia.org/wikipedia/commons/2/20/Park_Hill_path.jpg -> PH_09.jpg
+
+# https://commons.wikimedia.org/wiki/File:Park_Hill_Renovation.JPG
+# PUBLIC DOMAIN
+  https://upload.wikimedia.org/wikipedia/commons/d/d1/Park_Hill_Renovation.JPG -> PH_10.jpg
+
+# https://commons.wikimedia.org/wiki/File:Park_Hill_Samarkanda.JPG
+# CC-BY-SA
+  https://upload.wikimedia.org/wikipedia/commons/b/b9/Park_Hill_Samarkanda.JPG -> PH_11.jpg
+
+# https://commons.wikimedia.org/wiki/File:Park_Hill,_half-abandoned_council_housing_estate,_Sheffield,_England.jpg
+# CC-BY-SA / GFDL
+  https://upload.wikimedia.org/wikipedia/commons/0/0c/Park_Hill%2C_half-abandoned_council_housing_estate%2C_Sheffield%2C_England.jpg -> PH_12.jpg
+
+# https://commons.wikimedia.org/wiki/File:Park_Hill,_Sheffield_-_geograph.org.uk_-_903122.jpg
+# CC-BY-SA
+  https://upload.wikimedia.org/wikipedia/commons/d/d7/Park_Hill%2C_Sheffield_-_geograph.org.uk_-_903122.jpg -> PH_13.jpg
+
+# https://commons.wikimedia.org/wiki/File:Park_Hill,_Sheffield_-_geograph.org.uk_-_903156.jpg
+# CC-BY-SA
+  https://upload.wikimedia.org/wikipedia/commons/1/1c/Park_Hill%2C_Sheffield_-_geograph.org.uk_-_903156.jpg -> PH_14.jpg
+
+# https://commons.wikimedia.org/wiki/File:Park_Hill,_Sheffield,_April,_2012_.jpg
+# CC-BY-SA
+  https://upload.wikimedia.org/wikipedia/commons/8/83/Park_Hill%2C_Sheffield%2C_April%2C_2012_.jpg -> PH_15.jpg
+
+# https://commons.wikimedia.org/wiki/File:Scaffolded_building,_Sheffield_-_DSC07492.JPG
+# CC-BY-SA / GFDL
+  https://upload.wikimedia.org/wikipedia/commons/0/0e/Scaffolded_building%2C_Sheffield_-_DSC07492.JPG -> PH_16.jpg
+
+# https://commons.wikimedia.org/wiki/File:Sheffield_-_renovated_Park_Hill_flats.jpg
+# CC-BY-SA
+  https://upload.wikimedia.org/wikipedia/commons/3/31/Sheffield_-_renovated_Park_Hill_flats.jpg -> PH_17.jpg
+
+# https://commons.wikimedia.org/wiki/File:Tres_niveles.jpg
+# CC-BY-SA
+  https://upload.wikimedia.org/wikipedia/commons/6/6c/Tres_niveles.jpg -> PH_18.jpg
+
+
+# A P X X X X
+# -----------
+# http://www.1010.co.uk/indexwiki.html
+# http://www.1010.co.uk/ap0201.html
+# http://odin.bek.no/~crash2005/ap0201images/
+  http://odin.bek.no/~crash2005/ap0201images/images/xcrop00014.jpg
+  http://odin.bek.no/~crash2005/ap0201images/images/xcrop00017.jpg
+  http://odin.bek.no/~crash2005/ap0201images/images/xcrop00019.jpg
+  http://odin.bek.no/~crash2005/ap0201images/images/crop0003.jpg
+  http://odin.bek.no/~crash2005/ap0201images/images/crop0005.jpg
+  http://odin.bek.no/~crash2005/ap0201images/images/crop0011.jpg
+  http://odin.bek.no/~crash2005/ap0201images/images/crop0002.jpg
+  http://odin.bek.no/~crash2005/ap0201images/images/crop0006.jpg
+  http://odin.bek.no/~crash2005/ap0201images/images/crop0010.jpg
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
